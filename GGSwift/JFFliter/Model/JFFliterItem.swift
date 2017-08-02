@@ -33,7 +33,6 @@ class JFFliterItem: NSObject {
             switch type {
             case .ChooseButton:
                 self.enableMultipleChoose = true
-                self.isAllChosen = true
             case .Picker:
                 self.sectionSelect = true
                 self.pickerType = .TextField
@@ -45,19 +44,59 @@ class JFFliterItem: NSObject {
     var cacheHeaderHeight: CGFloat = -1.0
     
     // MARK: 多选按钮
-    var subTitles : [String]?
+    var subTitles : [String]? {
+        didSet {
+            var dic: [String:Bool] = [:]
+            if let subTitles = self.subTitles {
+                for index in 0..<Int(subTitles.count) {
+                    dic[subTitles[index]] = false
+                }
+                self.resetDic = dic
+                self.chosenDic = dic
+            }
+        }
+    }
     var subTitlesReferences : [String]?
     var allChosenReferences : String?
-    var enableMultipleChoose = true
-    var isAllChosen = true
+    var enableMultipleChoose = true {
+        didSet {
+            if self.enableMultipleChoose {
+                self.isAllChosen = true
+            }else {
+                self.isAllChosen = false
+            }
+        }
+    }
+    var isAllChosen = true {
+        didSet {
+            if self.isAllChosen {
+                self.chosenDic = self.resetDic
+            }
+        }
+    }
 
     // MARK: 选择器
     var sectionSelect = true
-    var pickerType = JFFliterPickerType.TextField
-    var leftMinDate : NSDate?
-    var leftMaxDate : NSDate?
-    var rightMinDate : NSDate?
-    var rightMaxDate : NSDate?
+    var pickerType = JFFliterPickerType.TextField {
+        didSet {
+            switch self.pickerType {
+            case .TextField:
+                self.leftMaxNumber = NSNumber.init(value: 366)
+                self.rightMaxNumber = NSNumber.init(value: 366)
+            case .DatePicker:
+            self.leftMinDate = self.dateByAddMonths(date: Date(), months: -12)
+                self.leftMaxDate = Date()
+                self.rightMinDate = Date()
+                self.rightMaxDate = self.dateByAddMonths(date: Date(), months: 12)
+            case .AddressPicker:
+                break
+            }
+        }
+    }
+    var leftMinDate : Date?
+    var leftMaxDate : Date?
+    var rightMinDate : Date?
+    var rightMaxDate : Date?
     
     var leftMaxNumber : NSNumber?
     var rightMaxNumber : NSNumber?
@@ -71,24 +110,51 @@ class JFFliterItem: NSObject {
     
     // MARK: 私有
     
-    private var chosenDic : [String:NSObject]?
-    private var resetDic : [String:NSObject]?
+    private var chosenDic : [String:Bool]?
+    private var resetDic : [String:Bool]?
     
     // MARK: 方法
     
     func setChosen(chosen:Bool, key: String) {
+        guard self.type == .ChooseButton else {
+            return
+        }
         
+        if let chosenDic = self.chosenDic {
+            if chosenDic.keys.contains(key) {
+                self.chosenDic![key] = chosen
+            }
+        }
+
     }
     
     func isChosen(key:String) -> Bool {
-     
-        return false
+        guard self.type == .ChooseButton else {
+            return false
+        }
+        var isChosen = false
+        if let chosenDic = self.chosenDic {
+            if chosenDic.keys.contains(key) {
+                isChosen = chosenDic[key]!
+            }
+        }
+        return isChosen
     }
     
     func reset() {
-        
+        switch self.type {
+        case .ChooseButton:
+            self.isAllChosen = true
+        case .Picker:
+            self.shouldReset = true
+        }
     }
     
-    
+    private func dateByAddMonths(date: Date,months: Int) -> Date {
+        let calendar = Calendar.current
+        var components = DateComponents()
+        components.month = months
+        return calendar.date(byAdding: components, to: date, wrappingComponents: true)!
+    }
     
 }

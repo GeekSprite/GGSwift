@@ -1,0 +1,656 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "JFFliterAllChosenKey"
+- "JFFliterDateFormter"
+- "JFFliterPickerType"
+- "JFFliterItemType"
+- "JFFliterItem"
+- "=="
+- "=="
+provides-nominal:
+- "O7GGSwift18JFFliterPickerType"
+- "O7GGSwift16JFFliterItemType"
+- "C7GGSwift12JFFliterItem"
+provides-member:
+- ["O7GGSwift18JFFliterPickerType", ""]
+- ["O7GGSwift16JFFliterItemType", ""]
+- ["C7GGSwift12JFFliterItem", ""]
+provides-dynamic-lookup:
+- "allChosenReferences"
+- "cacheCellHeight"
+- "cacheHeaderHeight"
+- "enableMultipleChoose"
+- "isAllChosen"
+- "isChosen"
+- "key"
+- "leftMaxDate"
+- "leftMaxNumber"
+- "leftMinDate"
+- "leftPlaceHolder"
+- "leftValue"
+- "reset"
+- "rightMaxDate"
+- "rightMaxNumber"
+- "rightMinDate"
+- "rightPlaceHolder"
+- "rightValue"
+- "sectionSelect"
+- "setChosen"
+- "shouldReset"
+- "subTitles"
+- "subTitlesReferences"
+- "title"
+depends-top-level:
+- !private "..<"
+- "=="
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CGFloat"
+- !private "Calendar"
+- "Date"
+- !private "DateComponents"
+- !private "Int"
+- "JFFliterAllChosenKey"
+- "JFFliterDateFormter"
+- "JFFliterItem"
+- "JFFliterItemType"
+- "JFFliterPickerType"
+- "NSNumber"
+- "NSObject"
+- "String"
+- "StringLiteralType"
+depends-member:
+- !private ["Ps9AnyObject", "Calendar"]
+- !private ["Ps9AnyObject", "Date"]
+- !private ["Ps9AnyObject", "DateComponents"]
+- !private ["Ps9AnyObject", "Int"]
+- ["Ps9AnyObject", "JFFliterItemType"]
+- ["Ps9AnyObject", "JFFliterPickerType"]
+- !private ["Ps9AnyObject", "NSNumber"]
+- !private ["Ps9AnyObject", "chosenDic"]
+- !private ["Ps9AnyObject", "dateByAddMonths"]
+- !private ["Ps9AnyObject", "enableMultipleChoose"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isAllChosen"]
+- !private ["Ps9AnyObject", "leftMaxDate"]
+- !private ["Ps9AnyObject", "leftMaxNumber"]
+- !private ["Ps9AnyObject", "leftMinDate"]
+- !private ["Ps9AnyObject", "pickerType"]
+- !private ["Ps9AnyObject", "resetDic"]
+- !private ["Ps9AnyObject", "rightMaxDate"]
+- !private ["Ps9AnyObject", "rightMaxNumber"]
+- !private ["Ps9AnyObject", "rightMinDate"]
+- !private ["Ps9AnyObject", "sectionSelect"]
+- !private ["Ps9AnyObject", "shouldReset"]
+- !private ["Ps9AnyObject", "subTitles"]
+- !private ["Ps9AnyObject", "type"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "count"]
+- !private ["Sa", "subscript"]
+- !private ["Ps23BidirectionalCollection", "count"]
+- !private ["Ps23BidirectionalCollection", "subscript"]
+- !private ["Ps17BitwiseOperations", "hashValue"]
+- !private ["Ps17BitwiseOperations", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps7CVarArg", "Calendar"]
+- !private ["Ps7CVarArg", "Date"]
+- !private ["Ps7CVarArg", "DateComponents"]
+- !private ["Ps7CVarArg", "Int"]
+- ["Ps7CVarArg", "JFFliterItemType"]
+- ["Ps7CVarArg", "JFFliterPickerType"]
+- !private ["Ps7CVarArg", "NSNumber"]
+- !private ["Ps7CVarArg", "chosenDic"]
+- !private ["Ps7CVarArg", "count"]
+- !private ["Ps7CVarArg", "dateByAddMonths"]
+- !private ["Ps7CVarArg", "enableMultipleChoose"]
+- !private ["Ps7CVarArg", "hashValue"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isAllChosen"]
+- !private ["Ps7CVarArg", "keys"]
+- !private ["Ps7CVarArg", "leftMaxDate"]
+- !private ["Ps7CVarArg", "leftMaxNumber"]
+- !private ["Ps7CVarArg", "leftMinDate"]
+- !private ["Ps7CVarArg", "pickerType"]
+- !private ["Ps7CVarArg", "resetDic"]
+- !private ["Ps7CVarArg", "rightMaxDate"]
+- !private ["Ps7CVarArg", "rightMaxNumber"]
+- !private ["Ps7CVarArg", "rightMinDate"]
+- !private ["Ps7CVarArg", "sectionSelect"]
+- !private ["Ps7CVarArg", "shouldReset"]
+- !private ["Ps7CVarArg", "subTitles"]
+- !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps7CVarArg", "type"]
+- ["Ps7CVarArg", ""]
+- !private ["V10Foundation8Calendar", "current"]
+- !private ["V10Foundation8Calendar", "date"]
+- !private ["Ps10Collection", "contains"]
+- !private ["Ps10Collection", "count"]
+- !private ["Ps10Collection", "keys"]
+- !private ["Ps10Collection", "subscript"]
+- !private ["Ps10Comparable", "hashValue"]
+- ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Calendar"]
+- !private ["Ps28CustomDebugStringConvertible", "ChooseButton"]
+- !private ["Ps28CustomDebugStringConvertible", "Date"]
+- !private ["Ps28CustomDebugStringConvertible", "DateComponents"]
+- !private ["Ps28CustomDebugStringConvertible", "Int"]
+- ["Ps28CustomDebugStringConvertible", "JFFliterItemType"]
+- ["Ps28CustomDebugStringConvertible", "JFFliterPickerType"]
+- !private ["Ps28CustomDebugStringConvertible", "NSNumber"]
+- !private ["Ps28CustomDebugStringConvertible", "chosenDic"]
+- !private ["Ps28CustomDebugStringConvertible", "count"]
+- !private ["Ps28CustomDebugStringConvertible", "current"]
+- !private ["Ps28CustomDebugStringConvertible", "date"]
+- !private ["Ps28CustomDebugStringConvertible", "dateByAddMonths"]
+- !private ["Ps28CustomDebugStringConvertible", "enableMultipleChoose"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isAllChosen"]
+- !private ["Ps28CustomDebugStringConvertible", "keys"]
+- !private ["Ps28CustomDebugStringConvertible", "leftMaxDate"]
+- !private ["Ps28CustomDebugStringConvertible", "leftMaxNumber"]
+- !private ["Ps28CustomDebugStringConvertible", "leftMinDate"]
+- !private ["Ps28CustomDebugStringConvertible", "month"]
+- !private ["Ps28CustomDebugStringConvertible", "pickerType"]
+- !private ["Ps28CustomDebugStringConvertible", "resetDic"]
+- !private ["Ps28CustomDebugStringConvertible", "rightMaxDate"]
+- !private ["Ps28CustomDebugStringConvertible", "rightMaxNumber"]
+- !private ["Ps28CustomDebugStringConvertible", "rightMinDate"]
+- !private ["Ps28CustomDebugStringConvertible", "sectionSelect"]
+- !private ["Ps28CustomDebugStringConvertible", "shouldReset"]
+- !private ["Ps28CustomDebugStringConvertible", "subTitles"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "type"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "hashValue"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "ChooseButton"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "count"]
+- !private ["Ps17CustomReflectable", "current"]
+- !private ["Ps17CustomReflectable", "date"]
+- !private ["Ps17CustomReflectable", "hashValue"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "keys"]
+- !private ["Ps17CustomReflectable", "month"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps23CustomStringConvertible", "Calendar"]
+- !private ["Ps23CustomStringConvertible", "Date"]
+- !private ["Ps23CustomStringConvertible", "DateComponents"]
+- !private ["Ps23CustomStringConvertible", "Int"]
+- ["Ps23CustomStringConvertible", "JFFliterItemType"]
+- ["Ps23CustomStringConvertible", "JFFliterPickerType"]
+- !private ["Ps23CustomStringConvertible", "NSNumber"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "chosenDic"]
+- !private ["Ps23CustomStringConvertible", "count"]
+- !private ["Ps23CustomStringConvertible", "current"]
+- !private ["Ps23CustomStringConvertible", "date"]
+- !private ["Ps23CustomStringConvertible", "dateByAddMonths"]
+- !private ["Ps23CustomStringConvertible", "enableMultipleChoose"]
+- !private ["Ps23CustomStringConvertible", "hashValue"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isAllChosen"]
+- !private ["Ps23CustomStringConvertible", "keys"]
+- !private ["Ps23CustomStringConvertible", "leftMaxDate"]
+- !private ["Ps23CustomStringConvertible", "leftMaxNumber"]
+- !private ["Ps23CustomStringConvertible", "leftMinDate"]
+- !private ["Ps23CustomStringConvertible", "month"]
+- !private ["Ps23CustomStringConvertible", "pickerType"]
+- !private ["Ps23CustomStringConvertible", "resetDic"]
+- !private ["Ps23CustomStringConvertible", "rightMaxDate"]
+- !private ["Ps23CustomStringConvertible", "rightMaxNumber"]
+- !private ["Ps23CustomStringConvertible", "rightMinDate"]
+- !private ["Ps23CustomStringConvertible", "sectionSelect"]
+- !private ["Ps23CustomStringConvertible", "shouldReset"]
+- !private ["Ps23CustomStringConvertible", "subTitles"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "type"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["V10Foundation4Date", "init"]
+- !private ["V10Foundation14DateComponents", "init"]
+- !private ["V10Foundation14DateComponents", "month"]
+- !private ["Vs10Dictionary", "keys"]
+- !private ["Vs10Dictionary", "subscript"]
+- ["Ps9Equatable", "AddressPicker"]
+- !private ["Ps9Equatable", "Calendar"]
+- ["Ps9Equatable", "ChooseButton"]
+- !private ["Ps9Equatable", "Date"]
+- !private ["Ps9Equatable", "DateComponents"]
+- ["Ps9Equatable", "DatePicker"]
+- !private ["Ps9Equatable", "Int"]
+- ["Ps9Equatable", "JFFliterItemType"]
+- ["Ps9Equatable", "JFFliterPickerType"]
+- !private ["Ps9Equatable", "NSNumber"]
+- ["Ps9Equatable", "Picker"]
+- ["Ps9Equatable", "TextField"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "_toAnyHashable"]
+- !private ["Ps9Equatable", "chosenDic"]
+- !private ["Ps9Equatable", "current"]
+- !private ["Ps9Equatable", "date"]
+- !private ["Ps9Equatable", "dateByAddMonths"]
+- !private ["Ps9Equatable", "enableMultipleChoose"]
+- ["Ps9Equatable", "hashValue"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isAllChosen"]
+- !private ["Ps9Equatable", "leftMaxDate"]
+- !private ["Ps9Equatable", "leftMaxNumber"]
+- !private ["Ps9Equatable", "leftMinDate"]
+- !private ["Ps9Equatable", "month"]
+- !private ["Ps9Equatable", "pickerType"]
+- !private ["Ps9Equatable", "resetDic"]
+- !private ["Ps9Equatable", "rightMaxDate"]
+- !private ["Ps9Equatable", "rightMaxNumber"]
+- !private ["Ps9Equatable", "rightMinDate"]
+- !private ["Ps9Equatable", "sectionSelect"]
+- !private ["Ps9Equatable", "shouldReset"]
+- !private ["Ps9Equatable", "subTitles"]
+- !private ["Ps9Equatable", "type"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "count"]
+- !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "init"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "keys"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps25ExpressibleByFloatLiteral", "init"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "hashValue"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "init"]
+- !private ["Ps23ExpressibleByNilLiteral", "ChooseButton"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["Ps8Hashable", "AddressPicker"]
+- !private ["Ps8Hashable", "Calendar"]
+- ["Ps8Hashable", "ChooseButton"]
+- !private ["Ps8Hashable", "Date"]
+- !private ["Ps8Hashable", "DateComponents"]
+- ["Ps8Hashable", "DatePicker"]
+- !private ["Ps8Hashable", "Int"]
+- ["Ps8Hashable", "JFFliterItemType"]
+- ["Ps8Hashable", "JFFliterPickerType"]
+- !private ["Ps8Hashable", "NSNumber"]
+- ["Ps8Hashable", "Picker"]
+- ["Ps8Hashable", "TextField"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "_toAnyHashable"]
+- !private ["Ps8Hashable", "chosenDic"]
+- !private ["Ps8Hashable", "current"]
+- !private ["Ps8Hashable", "date"]
+- !private ["Ps8Hashable", "dateByAddMonths"]
+- !private ["Ps8Hashable", "enableMultipleChoose"]
+- ["Ps8Hashable", "hashValue"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isAllChosen"]
+- !private ["Ps8Hashable", "leftMaxDate"]
+- !private ["Ps8Hashable", "leftMaxNumber"]
+- !private ["Ps8Hashable", "leftMinDate"]
+- !private ["Ps8Hashable", "month"]
+- !private ["Ps8Hashable", "pickerType"]
+- !private ["Ps8Hashable", "resetDic"]
+- !private ["Ps8Hashable", "rightMaxDate"]
+- !private ["Ps8Hashable", "rightMaxNumber"]
+- !private ["Ps8Hashable", "rightMinDate"]
+- !private ["Ps8Hashable", "sectionSelect"]
+- !private ["Ps8Hashable", "shouldReset"]
+- !private ["Ps8Hashable", "subTitles"]
+- !private ["Ps8Hashable", "type"]
+- ["Ps8Hashable", ""]
+- !private ["Si", "hashValue"]
+- !private ["Si", "init"]
+- !private ["Ps7Integer", "hashValue"]
+- !private ["Ps7Integer", "init"]
+- !private ["Ps17IntegerArithmetic", "hashValue"]
+- !private ["Ps17IntegerArithmetic", "init"]
+- ["C7GGSwift12JFFliterItem", "Bool"]
+- ["C7GGSwift12JFFliterItem", "CGFloat"]
+- !private ["C7GGSwift12JFFliterItem", "Calendar"]
+- ["C7GGSwift12JFFliterItem", "Date"]
+- !private ["C7GGSwift12JFFliterItem", "DateComponents"]
+- !private ["C7GGSwift12JFFliterItem", "Int"]
+- ["C7GGSwift12JFFliterItem", "JFFliterItemType"]
+- ["C7GGSwift12JFFliterItem", "JFFliterPickerType"]
+- ["C7GGSwift12JFFliterItem", "NSNumber"]
+- ["C7GGSwift12JFFliterItem", "String"]
+- ["C7GGSwift12JFFliterItem", "allChosenReferences"]
+- ["C7GGSwift12JFFliterItem", "cacheCellHeight"]
+- ["C7GGSwift12JFFliterItem", "cacheHeaderHeight"]
+- !private ["C7GGSwift12JFFliterItem", "chosenDic"]
+- !private ["C7GGSwift12JFFliterItem", "dateByAddMonths"]
+- ["C7GGSwift12JFFliterItem", "deinit"]
+- ["C7GGSwift12JFFliterItem", "enableMultipleChoose"]
+- ["C7GGSwift12JFFliterItem", "init"]
+- ["C7GGSwift12JFFliterItem", "isAllChosen"]
+- ["C7GGSwift12JFFliterItem", "isChosen"]
+- ["C7GGSwift12JFFliterItem", "key"]
+- ["C7GGSwift12JFFliterItem", "leftMaxDate"]
+- ["C7GGSwift12JFFliterItem", "leftMaxNumber"]
+- ["C7GGSwift12JFFliterItem", "leftMinDate"]
+- ["C7GGSwift12JFFliterItem", "leftPlaceHolder"]
+- ["C7GGSwift12JFFliterItem", "leftValue"]
+- ["C7GGSwift12JFFliterItem", "pickerType"]
+- ["C7GGSwift12JFFliterItem", "reset"]
+- !private ["C7GGSwift12JFFliterItem", "resetDic"]
+- ["C7GGSwift12JFFliterItem", "rightMaxDate"]
+- ["C7GGSwift12JFFliterItem", "rightMaxNumber"]
+- ["C7GGSwift12JFFliterItem", "rightMinDate"]
+- ["C7GGSwift12JFFliterItem", "rightPlaceHolder"]
+- ["C7GGSwift12JFFliterItem", "rightValue"]
+- ["C7GGSwift12JFFliterItem", "sectionSelect"]
+- ["C7GGSwift12JFFliterItem", "setChosen"]
+- ["C7GGSwift12JFFliterItem", "shouldReset"]
+- ["C7GGSwift12JFFliterItem", "subTitles"]
+- ["C7GGSwift12JFFliterItem", "subTitlesReferences"]
+- ["C7GGSwift12JFFliterItem", "title"]
+- ["C7GGSwift12JFFliterItem", "type"]
+- ["O7GGSwift16JFFliterItemType", "=="]
+- ["O7GGSwift16JFFliterItemType", "ChooseButton"]
+- ["O7GGSwift16JFFliterItemType", "Picker"]
+- ["O7GGSwift16JFFliterItemType", "_toAnyHashable"]
+- ["O7GGSwift16JFFliterItemType", "deinit"]
+- ["O7GGSwift16JFFliterItemType", "hashValue"]
+- ["O7GGSwift18JFFliterPickerType", "=="]
+- ["O7GGSwift18JFFliterPickerType", "AddressPicker"]
+- ["O7GGSwift18JFFliterPickerType", "DatePicker"]
+- ["O7GGSwift18JFFliterPickerType", "TextField"]
+- ["O7GGSwift18JFFliterPickerType", "_toAnyHashable"]
+- ["O7GGSwift18JFFliterPickerType", "deinit"]
+- ["O7GGSwift18JFFliterPickerType", "hashValue"]
+- !private ["Ps22LazyCollectionProtocol", "contains"]
+- !private ["Vs17LazyMapCollection", "contains"]
+- !private ["Ps20LazySequenceProtocol", "contains"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "hashValue"]
+- ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "count"]
+- !private ["Ps17MutableCollection", "subscript"]
+- ["PSo8NSCoding", "init"]
+- ["PSo9NSCopying", "init"]
+- ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSNumber", "init"]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "CGFloat"]
+- !private ["CSo8NSObject", "Calendar"]
+- ["CSo8NSObject", "Date"]
+- !private ["CSo8NSObject", "DateComponents"]
+- !private ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "JFFliterItemType"]
+- ["CSo8NSObject", "JFFliterPickerType"]
+- ["CSo8NSObject", "NSNumber"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "allChosenReferences"]
+- ["CSo8NSObject", "cacheCellHeight"]
+- ["CSo8NSObject", "cacheHeaderHeight"]
+- ["CSo8NSObject", "chosenDic"]
+- ["CSo8NSObject", "dateByAddMonths"]
+- ["CSo8NSObject", "enableMultipleChoose"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isAllChosen"]
+- ["CSo8NSObject", "isChosen"]
+- ["CSo8NSObject", "key"]
+- ["CSo8NSObject", "leftMaxDate"]
+- ["CSo8NSObject", "leftMaxNumber"]
+- ["CSo8NSObject", "leftMinDate"]
+- ["CSo8NSObject", "leftPlaceHolder"]
+- ["CSo8NSObject", "leftValue"]
+- ["CSo8NSObject", "pickerType"]
+- ["CSo8NSObject", "reset"]
+- ["CSo8NSObject", "resetDic"]
+- ["CSo8NSObject", "rightMaxDate"]
+- ["CSo8NSObject", "rightMaxNumber"]
+- ["CSo8NSObject", "rightMinDate"]
+- ["CSo8NSObject", "rightPlaceHolder"]
+- ["CSo8NSObject", "rightValue"]
+- ["CSo8NSObject", "sectionSelect"]
+- ["CSo8NSObject", "setChosen"]
+- ["CSo8NSObject", "shouldReset"]
+- ["CSo8NSObject", "subTitles"]
+- ["CSo8NSObject", "subTitlesReferences"]
+- ["CSo8NSObject", "title"]
+- ["CSo8NSObject", "type"]
+- ["CSo8NSObject", ""]
+- !private ["PSo16NSObjectProtocol", "Calendar"]
+- !private ["PSo16NSObjectProtocol", "Date"]
+- !private ["PSo16NSObjectProtocol", "DateComponents"]
+- !private ["PSo16NSObjectProtocol", "Int"]
+- ["PSo16NSObjectProtocol", "JFFliterItemType"]
+- ["PSo16NSObjectProtocol", "JFFliterPickerType"]
+- !private ["PSo16NSObjectProtocol", "NSNumber"]
+- !private ["PSo16NSObjectProtocol", "chosenDic"]
+- !private ["PSo16NSObjectProtocol", "dateByAddMonths"]
+- !private ["PSo16NSObjectProtocol", "enableMultipleChoose"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isAllChosen"]
+- !private ["PSo16NSObjectProtocol", "leftMaxDate"]
+- !private ["PSo16NSObjectProtocol", "leftMaxNumber"]
+- !private ["PSo16NSObjectProtocol", "leftMinDate"]
+- !private ["PSo16NSObjectProtocol", "pickerType"]
+- !private ["PSo16NSObjectProtocol", "resetDic"]
+- !private ["PSo16NSObjectProtocol", "rightMaxDate"]
+- !private ["PSo16NSObjectProtocol", "rightMaxNumber"]
+- !private ["PSo16NSObjectProtocol", "rightMinDate"]
+- !private ["PSo16NSObjectProtocol", "sectionSelect"]
+- !private ["PSo16NSObjectProtocol", "shouldReset"]
+- !private ["PSo16NSObjectProtocol", "subTitles"]
+- !private ["PSo16NSObjectProtocol", "type"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo14NSSecureCoding", "init"]
+- ["CSo8NSString", "init"]
+- !private ["Sq", "ChooseButton"]
+- !private ["Ps22RandomAccessCollection", "count"]
+- !private ["Ps22RandomAccessCollection", "subscript"]
+- !private ["Ps26RangeReplaceableCollection", "count"]
+- !private ["Ps26RangeReplaceableCollection", "subscript"]
+- !private ["P10Foundation20ReferenceConvertible", "current"]
+- !private ["P10Foundation20ReferenceConvertible", "date"]
+- !private ["P10Foundation20ReferenceConvertible", "init"]
+- !private ["P10Foundation20ReferenceConvertible", "month"]
+- !private ["Ps8Sequence", "contains"]
+- !private ["Ps8Sequence", "count"]
+- !private ["Ps8Sequence", "keys"]
+- !private ["Ps8Sequence", "subscript"]
+- !private ["Ps13SignedInteger", "hashValue"]
+- !private ["Ps13SignedInteger", "init"]
+- !private ["Ps12SignedNumber", "hashValue"]
+- !private ["Ps12SignedNumber", "init"]
+- !private ["Ps10Strideable", "hashValue"]
+- !private ["Ps10Strideable", "init"]
+- ["SS", "init"]
+- ["Ps16TextOutputStream", "init"]
+- ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps14_ArrayProtocol", "count"]
+- !private ["Ps14_ArrayProtocol", "subscript"]
+- !private ["Ps23_BidirectionalIndexable", "count"]
+- !private ["Ps23_BidirectionalIndexable", "subscript"]
+- !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "hashValue"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps33_ExpressibleByStringInterpolation", "init"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps9_Hashable", "AddressPicker"]
+- !private ["Ps9_Hashable", "Calendar"]
+- ["Ps9_Hashable", "ChooseButton"]
+- !private ["Ps9_Hashable", "Date"]
+- !private ["Ps9_Hashable", "DateComponents"]
+- ["Ps9_Hashable", "DatePicker"]
+- !private ["Ps9_Hashable", "Int"]
+- ["Ps9_Hashable", "JFFliterItemType"]
+- ["Ps9_Hashable", "JFFliterPickerType"]
+- !private ["Ps9_Hashable", "NSNumber"]
+- ["Ps9_Hashable", "Picker"]
+- ["Ps9_Hashable", "TextField"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "_toAnyHashable"]
+- !private ["Ps9_Hashable", "chosenDic"]
+- !private ["Ps9_Hashable", "current"]
+- !private ["Ps9_Hashable", "date"]
+- !private ["Ps9_Hashable", "dateByAddMonths"]
+- !private ["Ps9_Hashable", "enableMultipleChoose"]
+- ["Ps9_Hashable", "hashValue"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isAllChosen"]
+- !private ["Ps9_Hashable", "leftMaxDate"]
+- !private ["Ps9_Hashable", "leftMaxNumber"]
+- !private ["Ps9_Hashable", "leftMinDate"]
+- !private ["Ps9_Hashable", "month"]
+- !private ["Ps9_Hashable", "pickerType"]
+- !private ["Ps9_Hashable", "resetDic"]
+- !private ["Ps9_Hashable", "rightMaxDate"]
+- !private ["Ps9_Hashable", "rightMaxNumber"]
+- !private ["Ps9_Hashable", "rightMinDate"]
+- !private ["Ps9_Hashable", "sectionSelect"]
+- !private ["Ps9_Hashable", "shouldReset"]
+- !private ["Ps9_Hashable", "subTitles"]
+- !private ["Ps9_Hashable", "type"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps14_Incrementable", "init"]
+- !private ["Ps10_Indexable", "contains"]
+- !private ["Ps10_Indexable", "count"]
+- !private ["Ps10_Indexable", "keys"]
+- !private ["Ps10_Indexable", "subscript"]
+- !private ["Ps14_IndexableBase", "contains"]
+- !private ["Ps14_IndexableBase", "count"]
+- !private ["Ps14_IndexableBase", "keys"]
+- !private ["Ps14_IndexableBase", "subscript"]
+- !private ["Ps8_Integer", "hashValue"]
+- !private ["Ps8_Integer", "init"]
+- !private ["Ps18_IntegerArithmetic", "hashValue"]
+- !private ["Ps18_IntegerArithmetic", "init"]
+- !private ["P10Foundation14_MutableBoxing", "current"]
+- !private ["P10Foundation14_MutableBoxing", "date"]
+- !private ["P10Foundation14_MutableBoxing", "init"]
+- !private ["P10Foundation14_MutableBoxing", "month"]
+- !private ["Ps17_MutableIndexable", "count"]
+- !private ["Ps17_MutableIndexable", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "ChooseButton"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "current"]
+- !private ["Ps21_ObjectiveCBridgeable", "date"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "keys"]
+- !private ["Ps21_ObjectiveCBridgeable", "month"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Vs26_OptionalNilComparisonType", "ChooseButton"]
+- !private ["Ps22_RandomAccessIndexable", "count"]
+- !private ["Ps22_RandomAccessIndexable", "subscript"]
+- !private ["Ps26_RangeReplaceableIndexable", "count"]
+- !private ["Ps26_RangeReplaceableIndexable", "subscript"]
+- !private ["Ps14_SignedInteger", "hashValue"]
+- !private ["Ps14_SignedInteger", "init"]
+- !private ["Ps11_Strideable", "hashValue"]
+- !private ["Ps11_Strideable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23BidirectionalCollection"
+- !private "Ps17BitwiseOperations"
+- !private "Sb"
+- "Ps7CVarArg"
+- !private "V10Foundation8Calendar"
+- !private "Ps10Collection"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- !private "V10Foundation4Date"
+- !private "V10Foundation14DateComponents"
+- !private "Vs10Dictionary"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps30ExpressibleByDictionaryLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps25ExpressibleByFloatLiteral"
+- !private "Ps27ExpressibleByIntegerLiteral"
+- !private "Ps23ExpressibleByNilLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- !private "Si"
+- !private "Ps7Integer"
+- !private "Ps17IntegerArithmetic"
+- "C7GGSwift12JFFliterItem"
+- "O7GGSwift16JFFliterItemType"
+- "O7GGSwift18JFFliterPickerType"
+- !private "Ps22LazyCollectionProtocol"
+- !private "Vs17LazyMapCollection"
+- !private "Ps20LazySequenceProtocol"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo16NSMutableCopying"
+- !private "CSo8NSNumber"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
+- !private "Sq"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps26RangeReplaceableCollection"
+- !private "P10Foundation20ReferenceConvertible"
+- !private "Ps8Sequence"
+- !private "Ps13SignedInteger"
+- !private "Ps12SignedNumber"
+- !private "Ps10Strideable"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps23_BidirectionalIndexable"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps14_Incrementable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
+- !private "Ps8_Integer"
+- !private "Ps18_IntegerArithmetic"
+- !private "P10Foundation14_MutableBoxing"
+- !private "Ps17_MutableIndexable"
+- "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessIndexable"
+- !private "Ps26_RangeReplaceableIndexable"
+- !private "Ps14_SignedInteger"
+- !private "Ps11_Strideable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "871035750cbc13e0d31a20797812f0c5"

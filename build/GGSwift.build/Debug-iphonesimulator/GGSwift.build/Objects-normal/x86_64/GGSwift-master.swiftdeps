@@ -1,0 +1,16 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "0b7afc9e8f1a31a9eacab0df1d0e84a2"
+build_time: [554998687, 921166000]
+inputs:
+  "/Users/geekSprite/Desktop/local/GGSwift/GGSwift/JFFliter/JFFliterAppearceManager.swift": [554988412, 0]
+  "/Users/geekSprite/Desktop/local/GGSwift/Person.swift": [554988412, 0]
+  "/Users/geekSprite/Desktop/local/GGSwift/GGSwift/JFFliter/FontUtil.swift": [554988412, 0]
+  "/Users/geekSprite/Desktop/local/GGSwift/GGSwift/ViewController.swift": [554996209, 0]
+  "/Users/geekSprite/Desktop/local/GGSwift/GGSwift/AppDelegate.swift": [554988412, 0]
+  "/Users/geekSprite/Desktop/local/GGSwift/GGSwift/JFFliter/JFFliter.swift": [554996065, 0]
+  "/Users/geekSprite/Desktop/local/GGSwift/GGSwift/JFFliter/Components/JFFliterItemCell.swift": [554988412, 0]
+  "/Users/geekSprite/Desktop/local/GGSwift/GGSwift/JFFliter/Components/JFFliterSectionChooseCell.swift": [554993448, 0]
+  "/Users/geekSprite/Desktop/local/GGSwift/GGSwift/JFFliter/Components/JFFliterSectionHeader.swift": [554994841, 0]
+  "/Users/geekSprite/Desktop/local/GGSwift/GGSwift/JFFliter/Model/JFFliterItem.swift": [554993313, 0]
+  "/Users/geekSprite/Desktop/local/GGSwift/GGSwift/JFFliter/Components/JFFliterSectionCell.swift": [554988412, 0]
+  "/Users/geekSprite/Desktop/local/GGSwift/GGSwift/JFFliter/Components/JFFliterSectionPickerCell.swift": [554998687, 0]

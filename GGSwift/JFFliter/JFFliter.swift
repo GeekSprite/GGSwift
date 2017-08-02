@@ -125,8 +125,8 @@ class JFFliter: UIView {
     
     func commitInit() {
         let center = NotificationCenter.default
-        center.addObserver(self, selector: #selector(keyboardDidShow), name: .UIKeyboardWillHide, object: nil)
-        center.addObserver(self, selector: #selector(keyboardDidHide), name: .UIKeyboardDidShow, object: nil)
+        center.addObserver(self, selector: #selector(keyboardDidShow), name: .UIKeyboardDidShow, object: nil)
+        center.addObserver(self, selector: #selector(keyboardDidHide), name: .UIKeyboardWillHide, object: nil)
         self.isKeyboardVisible = false
         self.customizedHeader = false
         self.configureDefault()
@@ -250,7 +250,10 @@ class JFFliter: UIView {
     }
     
     func resetClick(sender: UIButton) {
-        print(#function)
+        for item in self.fliterItems {
+            item.reset()
+        }
+        self.fliterTableView.reloadData()
     }
     
     func confirmClick(sender: UIButton) {
@@ -305,6 +308,7 @@ class JFFliter: UIView {
             let lineCount: Int = Int(ceil(Double((item.subTitles?.count)! + (item.enableMultipleChoose ? 1 : 0)) / Double(JFFliterAppearceManager.shared.subButtonCount)))
             height += (CGFloat(lineCount) * subButtonHeight + CGFloat(lineCount - 1) * JFFliterAppearceManager.shared.sectionPaddingSize.height)
         }
+        height += JFFliterAppearceManager.shared.sectionPaddingSize.height
             item.setValue(height, forKeyPath: "cacheCellHeight")
         return height;
     }

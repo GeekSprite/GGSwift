@@ -28,7 +28,7 @@ class JFFliterSectionHeader: UITableViewHeaderFooterView {
     }
     
     open func didInit() {
-        self.backgroundColor = UIColor.clear
+        self.contentView.backgroundColor = UIColor.clear
         self.headerView.addSubview(self.headerLabel)
         self.addSubview(self.headerView)
 
@@ -38,7 +38,6 @@ class JFFliterSectionHeader: UITableViewHeaderFooterView {
         self.headerLabel.sizeToFit()
         self.headerView.frame = self.bounds
         self.headerLabel.frame.origin = CGPoint.init(x: JFFliterAppearceManager.shared.sectionPaddingSize.width, y: JFFliterAppearceManager.shared.sectionPaddingSize.height)
-        
     }
 
     open lazy var headerLabel: UILabel = {

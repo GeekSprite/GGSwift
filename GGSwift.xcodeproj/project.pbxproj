@@ -28,6 +28,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B2083E11F31F07B001F2365 /* JFFliterItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFliterItemCell.h; sourceTree = "<group>"; };
+		3B2083E21F31F07B001F2365 /* JFFliterItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFliterItemCell.m; sourceTree = "<group>"; };
+		3B2083E31F31F07B001F2365 /* JFFliterSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFliterSectionCell.h; sourceTree = "<group>"; };
+		3B2083E41F31F07B001F2365 /* JFFliterSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFliterSectionCell.m; sourceTree = "<group>"; };
+		3B2083E51F31F07B001F2365 /* JFFliterSectionChooseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFliterSectionChooseCell.h; sourceTree = "<group>"; };
+		3B2083E61F31F07B001F2365 /* JFFliterSectionChooseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFliterSectionChooseCell.m; sourceTree = "<group>"; };
+		3B2083E71F31F07B001F2365 /* JFFliterSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFliterSectionHeader.h; sourceTree = "<group>"; };
+		3B2083E81F31F07B001F2365 /* JFFliterSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFliterSectionHeader.m; sourceTree = "<group>"; };
+		3B2083E91F31F07B001F2365 /* JFFliterSectionPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFliterSectionPickerCell.h; sourceTree = "<group>"; };
+		3B2083EA1F31F07B001F2365 /* JFFliterSectionPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFliterSectionPickerCell.m; sourceTree = "<group>"; };
+		3B2083EB1F31F07B001F2365 /* JFFliterAppearanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFliterAppearanceManager.h; sourceTree = "<group>"; };
+		3B2083EC1F31F07B001F2365 /* JFFliterAppearanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFliterAppearanceManager.m; sourceTree = "<group>"; };
+		3B2083ED1F31F07B001F2365 /* JFFliterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFliterView.h; sourceTree = "<group>"; };
+		3B2083EE1F31F07B001F2365 /* JFFliterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFliterView.m; sourceTree = "<group>"; };
+		3B2083F01F31F07B001F2365 /* JFFliterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFliterItem.h; sourceTree = "<group>"; };
+		3B2083F11F31F07B001F2365 /* JFFliterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFliterItem.m; sourceTree = "<group>"; };
 		6E55DA2E1F306B0A009BB8C9 /* JFFliter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFFliter.swift; sourceTree = "<group>"; };
 		6E55DA301F306B29009BB8C9 /* JFFliterAppearceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFFliterAppearceManager.swift; sourceTree = "<group>"; };
 		6E55DA321F306B3B009BB8C9 /* JFFliterItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFFliterItem.swift; sourceTree = "<group>"; };
@@ -61,6 +77,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B2083DF1F31F07B001F2365 /* JFFliter */ = {
+			isa = PBXGroup;
+			children = (
+				3B2083E01F31F07B001F2365 /* components */,
+				3B2083EB1F31F07B001F2365 /* JFFliterAppearanceManager.h */,
+				3B2083EC1F31F07B001F2365 /* JFFliterAppearanceManager.m */,
+				3B2083ED1F31F07B001F2365 /* JFFliterView.h */,
+				3B2083EE1F31F07B001F2365 /* JFFliterView.m */,
+				3B2083EF1F31F07B001F2365 /* Model */,
+			);
+			path = JFFliter;
+			sourceTree = "<group>";
+		};
+		3B2083E01F31F07B001F2365 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				3B2083E11F31F07B001F2365 /* JFFliterItemCell.h */,
+				3B2083E21F31F07B001F2365 /* JFFliterItemCell.m */,
+				3B2083E31F31F07B001F2365 /* JFFliterSectionCell.h */,
+				3B2083E41F31F07B001F2365 /* JFFliterSectionCell.m */,
+				3B2083E51F31F07B001F2365 /* JFFliterSectionChooseCell.h */,
+				3B2083E61F31F07B001F2365 /* JFFliterSectionChooseCell.m */,
+				3B2083E71F31F07B001F2365 /* JFFliterSectionHeader.h */,
+				3B2083E81F31F07B001F2365 /* JFFliterSectionHeader.m */,
+				3B2083E91F31F07B001F2365 /* JFFliterSectionPickerCell.h */,
+				3B2083EA1F31F07B001F2365 /* JFFliterSectionPickerCell.m */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		3B2083EF1F31F07B001F2365 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B2083F01F31F07B001F2365 /* JFFliterItem.h */,
+				3B2083F11F31F07B001F2365 /* JFFliterItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6E55DA2B1F306A65009BB8C9 /* JFFliter */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +162,7 @@
 		6EEEA8D91F2AD149009F480A = {
 			isa = PBXGroup;
 			children = (
+				3B2083DF1F31F07B001F2365 /* JFFliter */,
 				6EB734861F2F1F6C00E85511 /* Person.swift */,
 				6EEEA8E41F2AD149009F480A /* GGSwift */,
 				6EEEA8E31F2AD149009F480A /* Products */,

@@ -54,7 +54,10 @@ extension JFFliterSectionChooseCell : UICollectionViewDelegateFlowLayout, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (self.cellItem?.subTitles?.count)! + ((self.cellItem?.enableMultipleChoose)! ? 1 : 0)
+        if let count = self.cellItem?.subTitles?.count {
+            return count + (self.cellItem!.enableMultipleChoose ? 1 : 0)
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -65,48 +68,47 @@ extension JFFliterSectionChooseCell : UICollectionViewDelegateFlowLayout, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: JFFliterItemCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.kFliterItemCellID, for: indexPath) as! JFFliterItemCell
-        if (self.cellItem?.enableMultipleChoose)! && indexPath.row == 0 {
+        if let enableMultipleChoose = self.cellItem?.enableMultipleChoose, enableMultipleChoose && indexPath.row == 0 {
             cell.chooseButton.setTitle(JFFliterAllChosenKey, for: .normal)
-            cell.chosen = true
+            cell.chosen = self.cellItem?.isAllChosen
             return cell
         }
         
-        let title = self.cellItem?.subTitles?[indexPath.row - ((self.cellItem?.enableMultipleChoose)! ? 1 : 0)]
+        let title = self.cellItem!.subTitles?[indexPath.row - (self.cellItem!.enableMultipleChoose ? 1 : 0)]
         cell.chooseButton.setTitle(title, for: .normal)
-        cell.chosen = self.cellItem?.isChosen(key: title!)
+        cell.chosen = self.cellItem!.isChosen(key: title!)
         return cell
     }
 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if !(self.cellItem?.enableMultipleChoose)! {
-            let title = (self.cellItem?.subTitles)![indexPath.row]
-            if (self.cellItem?.isChosen(key: title))! {
+        if !self.cellItem!.enableMultipleChoose {
+            let title = (self.cellItem!.subTitles)![indexPath.row]
+            if self.cellItem!.isChosen(key: title) {
                 var shouldReverse = false
-                for key in (self.cellItem?.subTitles)! {
+                for key in (self.cellItem!.subTitles)! {
                     if key == title {
                         continue
                     }
-                    if (self.cellItem?.isChosen(key: key))! {
+                    if self.cellItem!.isChosen(key: key) {
                         shouldReverse = true
                         break
                     }
                 }
                 if shouldReverse {
-                    self.cellItem?.setChosen(chosen: false, key: title)
+                    self.cellItem!.setChosen(chosen: false, key: title)
                     self.collectionView.reloadItems(at: [indexPath])
                 }
             }else {
                 var prePath: IndexPath?
-                for indedx in 0..<(self.cellItem?.subTitles?.count)! {
-                    let key = self.cellItem?.subTitles?[indedx]
-                    if (self.cellItem?.isChosen(key: key!))! {
-                        self.cellItem?.setChosen(chosen: false, key: key!)
+                for indedx in 0..<(self.cellItem!.subTitles?.count)! {
+                    if let key = self.cellItem!.subTitles?[indedx], self.cellItem!.isChosen(key: key) {
+                        self.cellItem!.setChosen(chosen: false, key: key)
                         prePath = IndexPath.init(row: indedx, section: 0)
                         break;
                     }
                 }
-                self.cellItem?.setChosen(chosen: true, key: title)
+                self.cellItem!.setChosen(chosen: true, key: title)
                 if let prePath = prePath {
                     collectionView.reloadItems(at: [indexPath, prePath])
                 }else {
@@ -115,44 +117,44 @@ extension JFFliterSectionChooseCell : UICollectionViewDelegateFlowLayout, UIColl
             }
         }else {
             if indexPath.row == 0 {
-                if let isAllChosen = self.cellItem?.isAllChosen, isAllChosen {
+                if self.cellItem!.isAllChosen {
                     return
                 }
-                self.cellItem?.isAllChosen = true
+                self.cellItem!.isAllChosen = true
                 collectionView.reloadData()
             }else {
-                let title = self.cellItem?.subTitles?[indexPath.row - 1]
-                if (self.cellItem?.isChosen(key: title!))! {
+                let title = self.cellItem!.subTitles?[indexPath.row - 1]
+                if self.cellItem!.isChosen(key: title!) {
                     var shouldReverse = false
-                    for key in (self.cellItem?.subTitles)! {
+                    for key in (self.cellItem!.subTitles)! {
                         if key == title {
                             continue
                         }
-                        if (self.cellItem?.isChosen(key: key))! {
+                        if self.cellItem!.isChosen(key: key) {
                             shouldReverse = true
                             break
                         }
                     }
                     if shouldReverse {
-                        self.cellItem?.setChosen(chosen: false, key: title!)
+                        self.cellItem!.setChosen(chosen: false, key: title!)
                         collectionView.reloadItems(at: [indexPath])
                     }
                 }else {
                     var allChosenPath: IndexPath?
-                    if (self.cellItem?.isAllChosen)! {
-                        self.cellItem?.isAllChosen = false
+                    if self.cellItem!.isAllChosen {
+                        self.cellItem!.isAllChosen = false
                         allChosenPath = IndexPath.init(row: 0, section: 0)
                     }
-                    self.cellItem?.setChosen(chosen: true, key: title!)
+                    self.cellItem!.setChosen(chosen: true, key: title!)
                         var shouldReset = true
-                    for key in (self.cellItem?.subTitles)! {
-                        shouldReset = (self.cellItem?.isChosen(key: key))!
+                    for key in (self.cellItem!.subTitles)! {
+                        shouldReset = self.cellItem!.isChosen(key: key)
                         if !shouldReset {
                             break
                         }
                     }
                     if shouldReset {
-                        self.cellItem?.isAllChosen = true
+                        self.cellItem!.isAllChosen = true
                         collectionView.reloadData()
                     }else {
                         var items = [indexPath]

@@ -29,8 +29,10 @@ class ViewController: UIViewController {
             let item = JFFliterItem()
             item.title = "交易类型"
             item.key = "tradeType"
-            item.type = .ChooseButton
-            item.subTitles = ["贴现","买入","转让"]
+            item.type = .Picker
+            item.sectionSelect = arc4random() % 2 == 0
+//            item.subTitles = ["贴现","买入","转让"]
+//            item.enableMultipleChoose = false
             items.append(item)
         }
         let fliter = JFFliter.init(fliterItems: items) { (dic) in
