@@ -8,16 +8,21 @@
 
 import UIKit
 
-let kWidth = UIScreen.main.bounds.size.width
-let kHeight = UIScreen.main.bounds.size.height
+let JFFliter_kWidth = UIScreen.main.bounds.size.width
+let JFFliter_kHeight = UIScreen.main.bounds.size.height
+
+
+fileprivate let kFliterSectionChooseCellID = "kFliterSectionChooseCellID"
+fileprivate let kFliterSectionPickerCellID = "kFliterSectionPickerCellID"
+fileprivate let kFliterSectionCellHeaderID = "kFliterSectionCellHeaderID"
 
 enum JFFliterSlideFrom {
     case Left
     case Right
 }
 
-protocol JFFliterViewDelegate : NSObjectProtocol {
-    
+@objc protocol JFFliterViewDelegate : NSObjectProtocol {
+   @objc optional func shouldConfirm(withResult result:[String:[String]]) -> Bool
 }
 
 protocol JFFliterViewDataSource : NSObjectProtocol {
@@ -26,55 +31,57 @@ protocol JFFliterViewDataSource : NSObjectProtocol {
 
 class JFFliter: UIView {
     
-    private let alphaDuration = 0.1
-    private let slideDuration = 0.3
-    
-    weak var dataSource : JFFliterViewDataSource?
-    weak var delegate   : JFFliterViewDelegate?
-    
-    var slideFrom : JFFliterSlideFrom = .Right
-    var showStatusBar : Bool = true
-    var shadowWidth : CGFloat = 116.0
-    var bottomHeight : CGFloat = 43.0
-    var shadowColor : UIColor = UIColor.colorWithHexString(hex: "#D7D7D7", alpha: 0.1)
-    var contentColor : UIColor = UIColor.colorWithHexString(hex: "#1C1E21", alpha: 1.0)
-    
-    lazy var resetButton : UIButton = {
-        let resetButton = UIButton.init(type: .custom)
-        resetButton.backgroundColor = UIColor.colorWithHexString(hex: "#3A3F46")
-        resetButton.setTitle("重置", for: .normal)
-        resetButton.titleLabel?.font = UIFont.systemFont(ofSize: FontUtil.fontSize(size: 15))
-        resetButton.setTitleColor(UIColor.colorWithHexString(hex: "#D7D7D7"), for: .normal)
-        resetButton.addTarget(self, action: #selector(resetClick(sender:)), for: .touchUpInside)
-        return resetButton
-        
-    }()
-    lazy var confirmButton : UIButton = {
-        let confirmButton = UIButton.init(type: .custom)
-        confirmButton.backgroundColor = UIColor.colorWithHexString(hex: "#ED8D03")
-        confirmButton.setTitle("确定", for: .normal)
-        confirmButton.titleLabel?.font = UIFont.systemFont(ofSize: FontUtil.fontSize(size: 15))
-        confirmButton.setTitleColor(UIColor.colorWithHexString(hex: "#FFFFFF"), for: .normal)
-        confirmButton.addTarget(self, action: #selector(confirmClick(sender:)), for: .touchUpInside)
-        return confirmButton
-    }()
-    
+    // MARK: Private Property
     
     fileprivate var isKeyboardVisible = false
     fileprivate var customizedHeader = false
     fileprivate var itemCellClass : AnyClass?
     fileprivate var fliterItems : [JFFliterItem] = []
     
-    fileprivate var completionHandler : (([String:AnyObject])->Void)?
+    fileprivate var completionHandler : (([String:[String]])->Void)?
     
+    fileprivate var comtainerWindow : UIWindow?
+    
+    // MARK: Configuration
+    var alphaDuration = 0.1
+    var slideDuration = 0.3
+    var slideFrom : JFFliterSlideFrom = .Right
+    var showStatusBar : Bool = false
+    var shadowWidth : CGFloat = 116.0
+    var bottomHeight : CGFloat = 43.0
+    var shadowColor : UIColor = UIColor.JFFliter_colorWithHexString(hex: "#D7D7D7", alpha: 0.1)
+    var contentColor : UIColor = UIColor.JFFliter_colorWithHexString(hex: "#1C1E21", alpha: 1.0)
+    
+    // MARK: Property
+    weak var dataSource : JFFliterViewDataSource?
+    weak var delegate   : JFFliterViewDelegate?
+    
+    lazy var resetButton : UIButton = {
+        let resetButton = UIButton.init(type: .custom)
+        resetButton.backgroundColor = UIColor.JFFliter_colorWithHexString(hex: "#3A3F46")
+        resetButton.setTitle("重置", for: .normal)
+        resetButton.titleLabel?.font = UIFont.systemFont(ofSize: FontUtil.fontSize(size: 15))
+        resetButton.setTitleColor(UIColor.JFFliter_colorWithHexString(hex: "#D7D7D7"), for: .normal)
+        resetButton.addTarget(self, action: #selector(resetClick(sender:)), for: .touchUpInside)
+        return resetButton
+        
+    }()
+    lazy var confirmButton : UIButton = {
+        let confirmButton = UIButton.init(type: .custom)
+        confirmButton.backgroundColor = UIColor.JFFliter_colorWithHexString(hex: "#ED8D03")
+        confirmButton.setTitle("确定", for: .normal)
+        confirmButton.titleLabel?.font = UIFont.systemFont(ofSize: FontUtil.fontSize(size: 15))
+        confirmButton.setTitleColor(UIColor.JFFliter_colorWithHexString(hex: "#FFFFFF"), for: .normal)
+        confirmButton.addTarget(self, action: #selector(confirmClick(sender:)), for: .touchUpInside)
+        return confirmButton
+    }()
+
+    
+    // MARK: Lazy Setter
     fileprivate lazy var tableViewContainer : UIView = {
         let container = UIView()
         return container
     }()
-    
-    fileprivate let kFliterSectionChooseCellID = "kFliterSectionChooseCellID"
-    fileprivate let kFliterSectionPickerCellID = "kFliterSectionPickerCellID"
-    fileprivate let kFliterSectionCellHeaderID = "kFliterSectionCellHeaderID"
     
     fileprivate lazy var fliterTableView : UITableView = {
         let t = UITableView.init(frame: CGRect.zero, style: .grouped)
@@ -84,9 +91,9 @@ class JFFliter: UIView {
         t.separatorStyle = .none
         t.showsVerticalScrollIndicator = false
         t.keyboardDismissMode = .onDrag
-        t.register(JFFliterSectionChooseCell.self, forCellReuseIdentifier: self.kFliterSectionChooseCellID)
-        t.register(JFFliterSectionPickerCell.self, forCellReuseIdentifier: self.kFliterSectionPickerCellID)
-        t.register(JFFliterSectionHeader.self, forHeaderFooterViewReuseIdentifier: self.kFliterSectionCellHeaderID)
+        t.register(JFFliterSectionChooseCell.self, forCellReuseIdentifier: kFliterSectionChooseCellID)
+        t.register(JFFliterSectionPickerCell.self, forCellReuseIdentifier: kFliterSectionPickerCellID)
+        t.register(JFFliterSectionHeader.self, forHeaderFooterViewReuseIdentifier: kFliterSectionCellHeaderID)
         
         return t
     }()
@@ -96,19 +103,18 @@ class JFFliter: UIView {
         return shadowView
     }()
     
-    fileprivate var comtainerWindow : UIWindow?
-    
+    // MARK: Life Cricle
     deinit {
         let center = NotificationCenter.default
         center.removeObserver(self, name: .UIKeyboardDidShow, object: nil)
         center.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
     
-    class func filterView(fliterItems: [JFFliterItem], completion:(([String:AnyObject])->Void)?) -> JFFliter {
+    class func filterView(fliterItems: [JFFliterItem], completion:(([String:[String]])->Void)?) -> JFFliter {
         return JFFliter.init(fliterItems: fliterItems, completion: completion)
     }
     
-    convenience init(fliterItems: [JFFliterItem],completion: (([String:AnyObject])->Void)?) {
+    convenience init(fliterItems: [JFFliterItem],completion: (([String:[String]])->Void)?) {
         self.init(frame: CGRect.zero)
         self.fliterItems = fliterItems
         self.completionHandler = completion
@@ -123,72 +129,11 @@ class JFFliter: UIView {
         self.commitInit()
     }
     
-    func commitInit() {
-        let center = NotificationCenter.default
-        center.addObserver(self, selector: #selector(keyboardDidShow), name: .UIKeyboardDidShow, object: nil)
-        center.addObserver(self, selector: #selector(keyboardDidHide), name: .UIKeyboardWillHide, object: nil)
-        self.isKeyboardVisible = false
-        self.customizedHeader = false
-        self.configureDefault()
-        self.configureViews()
-        
-    }
-    
-    func configureDefault()  {
-        
-    }
-    
-    func configureViews() {
-        self.frame = CGRect.init(x: 0, y: 0, width: kWidth, height: kHeight)
-        self.shadowView.frame = self.bounds
-        let containerX = self.slideFrom == .Right ? kWidth : kWidth * (-1.0)
-        let tableViewX = self.slideFrom == .Right ? 0 : self.shadowWidth
-        let tableViewY = self.showStatusBar ? UIApplication.shared.statusBarFrame.size.height : 0
-        
-        self.tableViewContainer.frame = CGRect.init(x: containerX, y: 0, width: kWidth, height: kHeight)
-        self.tableViewContainer.backgroundColor = self.contentColor
-        
-        self.fliterTableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: self.bottomHeight, right: 0)
-    
-        self.fliterTableView.frame = CGRect.init(x: tableViewX, y: tableViewY, width: (kWidth - self.shadowWidth), height: kHeight - tableViewY)
-        
-        self.resetButton.frame = CGRect.init(x: self.fliterTableView.x, y: self.tableViewContainer.height - self.bottomHeight, width: self.fliterTableView.width / 2.0, height: self.bottomHeight)
-        
-        self.confirmButton.frame = CGRect.init(x: self.fliterTableView.x + self.resetButton.width, y: self.tableViewContainer.height - self.bottomHeight, width: self.fliterTableView.width / 2.0, height: self.bottomHeight)
-        
-        self.fliterTableView.backgroundColor = self.contentColor
-        self.tableViewContainer.addSubview(self.fliterTableView)
-        self.tableViewContainer.addSubview(self.resetButton)
-        self.tableViewContainer.addSubview(self.confirmButton)
-    }
-    
-    func addToWindow() {
-        guard self.superview == nil else {
-            return
-        }
-        
-        self.comtainerWindow = UIWindow.init(frame: UIScreen.main.bounds)
-        self.comtainerWindow?.windowLevel = self.showStatusBar ? UIWindowLevelNormal : UIWindowLevelAlert
-        self.addSubview(self.shadowView)
-        self.addSubview(self.tableViewContainer)
-        self.comtainerWindow?.addSubview(self)
-        self.comtainerWindow?.makeKeyAndVisible()
-    }
-    
-    func removeFromWindow() {
-        guard self.superview != nil else {
-            return
-        }
-        
-        self.removeFromSuperview()
-        self.comtainerWindow = nil
-    }
-    
+    // MARK: Public Methods
     func showWithCompletion(completion: (()->Void)?) {
         guard self.superview == nil else {
             return
         }
-        
         self.addToWindow()
         self.showAnimationWithCompletion { _ in
             if let completion = completion {
@@ -202,10 +147,66 @@ class JFFliter: UIView {
             self.endEditing(true)
             return
         }
-        
         self.hideAnimationWithCompletion { (_) in
             self.removeFromWindow()
         }
+    }
+    
+    // MARK: Configure Views
+    private func commitInit() {
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(keyboardDidShow), name: .UIKeyboardDidShow, object: nil)
+        center.addObserver(self, selector: #selector(keyboardDidHide), name: .UIKeyboardWillHide, object: nil)
+        self.isKeyboardVisible = false
+        self.customizedHeader = false
+        self.configureViews()
+    }
+    
+    private func configureViews() {
+        self.frame = CGRect.init(x: 0, y: 0, width: JFFliter_kWidth, height: JFFliter_kHeight)
+        self.shadowView.frame = self.bounds
+        let containerX = self.slideFrom == .Right ? JFFliter_kWidth : JFFliter_kWidth * (-1.0)
+        let tableViewX = self.slideFrom == .Right ? 0 : self.shadowWidth
+        let tableViewY = self.showStatusBar ? UIApplication.shared.statusBarFrame.size.height : 0
+        
+        self.tableViewContainer.frame = CGRect.init(x: containerX, y: 0, width: JFFliter_kWidth, height: JFFliter_kHeight)
+        self.tableViewContainer.backgroundColor = self.contentColor
+        
+        self.fliterTableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: self.bottomHeight, right: 0)
+    
+        self.fliterTableView.frame = CGRect.init(x: tableViewX, y: tableViewY, width: (JFFliter_kWidth - self.shadowWidth), height: JFFliter_kHeight - tableViewY)
+        
+        self.resetButton.frame = CGRect.init(x: self.fliterTableView.JFFliter_x, y: self.tableViewContainer.JFFliter_height - self.bottomHeight, width: self.fliterTableView.JFFliter_width / 2.0, height: self.bottomHeight)
+        
+        self.confirmButton.frame = CGRect.init(x: self.fliterTableView.JFFliter_x + self.resetButton.JFFliter_width, y: self.tableViewContainer.JFFliter_height - self.bottomHeight, width: self.fliterTableView.JFFliter_width / 2.0, height: self.bottomHeight)
+        
+        self.fliterTableView.backgroundColor = self.contentColor
+        self.tableViewContainer.addSubview(self.fliterTableView)
+        self.tableViewContainer.addSubview(self.resetButton)
+        self.tableViewContainer.addSubview(self.confirmButton)
+    }
+    
+    // MARK: Private Methods
+    private func addToWindow() {
+        guard self.superview == nil else {
+            return
+        }
+        
+        self.comtainerWindow = UIWindow.init(frame: UIScreen.main.bounds)
+        self.comtainerWindow?.windowLevel = self.showStatusBar ? UIWindowLevelNormal : UIWindowLevelAlert
+        self.addSubview(self.shadowView)
+        self.addSubview(self.tableViewContainer)
+        self.comtainerWindow?.addSubview(self)
+        self.comtainerWindow?.makeKeyAndVisible()
+    }
+    
+    private func removeFromWindow() {
+        guard self.superview != nil else {
+            return
+        }
+        
+        self.removeFromSuperview()
+        self.comtainerWindow = nil
     }
     
    private func showAnimationWithCompletion(completion: ((Bool) -> Void)? ) {
@@ -213,7 +214,7 @@ class JFFliter: UIView {
         let containerX = self.slideFrom == .Right ? self.shadowWidth : (-1.0) * self.shadowWidth
 
         UIView.animate(withDuration: slideDuration, animations: { 
-            self.tableViewContainer.frame = CGRect.init(x: containerX, y: 0, width: kWidth, height: kHeight)
+            self.tableViewContainer.frame = CGRect.init(x: containerX, y: 0, width: JFFliter_kWidth, height: JFFliter_kHeight)
         }) { _ in
             UIView.animate(withDuration: self.alphaDuration, animations: { 
                 self.shadowView.backgroundColor = self.shadowColor
@@ -225,15 +226,15 @@ class JFFliter: UIView {
         }
     }
     
-    func hideAnimationWithCompletion(completion: ((Bool) -> Void)?) {
+    private func hideAnimationWithCompletion(completion: ((Bool) -> Void)?) {
         self.endEditing(true)
-        let containerX = self.slideFrom == .Right ? kWidth : -kWidth
+        let containerX = self.slideFrom == .Right ? JFFliter_kWidth : -JFFliter_kWidth
         
         UIView.animate(withDuration: alphaDuration, animations: { 
             self.shadowView.backgroundColor = UIColor.clear
         }) { (flag) in
             UIView.animate(withDuration: self.slideDuration, animations: { 
-                self.tableViewContainer.frame = CGRect.init(x: containerX, y: 0, width: kWidth, height: kHeight)
+                self.tableViewContainer.frame = CGRect.init(x: containerX, y: 0, width: JFFliter_kWidth, height: JFFliter_kHeight)
             }, completion: { (flag) in
                 if let completion = completion {
                     completion(flag)
@@ -242,24 +243,6 @@ class JFFliter: UIView {
         }
     }
 
-    
-    // MARK: Target Action
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.hide()
-    }
-    
-    func resetClick(sender: UIButton) {
-        for item in self.fliterItems {
-            item.reset()
-        }
-        self.fliterTableView.reloadData()
-    }
-    
-    func confirmClick(sender: UIButton) {
-         print(#function)
-    }
-    
     func keyboardDidShow() {
         self.isKeyboardVisible = true
     }
@@ -272,7 +255,7 @@ class JFFliter: UIView {
         return self.isKeyboardVisible
     }
     
-    func calculateCellHeaderHeightFor(index: Int) -> CGFloat {
+    fileprivate func calculateCellHeaderHeightFor(index: Int) -> CGFloat {
         guard index < self.fliterItems.count else {
             return 0.01
         }
@@ -291,7 +274,7 @@ class JFFliter: UIView {
         return height
     }
     
-    func calculateCellHeightFor(index: Int) -> CGFloat {
+    fileprivate func calculateCellHeightFor(index: Int) -> CGFloat {
         guard index < self.fliterItems.count else {
             return 0.01
         }
@@ -309,10 +292,80 @@ class JFFliter: UIView {
             height += (CGFloat(lineCount) * subButtonHeight + CGFloat(lineCount - 1) * JFFliterAppearceManager.shared.sectionPaddingSize.height)
         }
         height += JFFliterAppearceManager.shared.sectionPaddingSize.height
-            item.setValue(height, forKeyPath: "cacheCellHeight")
+        item.setValue(height, forKeyPath: "cacheCellHeight")
         return height;
     }
 
+    // MARK: Target Action
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.hide()
+    }
+    
+    func resetClick(sender: UIButton) {
+        for item in self.fliterItems {
+            item.reset()
+        }
+        self.fliterTableView.reloadData()
+    }
+    
+    func confirmClick(sender: UIButton) {
+        var result = [String:[String]]()
+        for item in self.fliterItems {
+            if item.type == .ChooseButton {
+                var itemArr = [String]()
+                if item.isAllChosen && item.allChosenReferences != nil {
+                    itemArr.append(item.allChosenReferences!)
+                }else {
+                    if let subtitles = item.subTitles {
+                        for index in 0..<subtitles.count  {
+                            let title = subtitles[index]
+                            var itemValue = title
+                            if let subTitlesReferences = item.subTitlesReferences,subTitlesReferences.count > index {
+                                itemValue = subTitlesReferences[index]
+                            }
+                            if item.isAllChosen {
+                                itemArr.append(itemValue)
+                            }else if (item.isChosen(key: title)) {
+                                itemArr.append(itemValue)
+                            }
+                        }
+                    }
+                }
+                result[item.key] = itemArr
+            }else {
+                
+                var itemArr = [String]()
+                
+                if item.leftValue != nil {
+                    itemArr.append(item.leftValue!)
+                }
+                if item.rightValue != nil {
+                    itemArr.append(item.rightValue!)
+                }
+                result[item.key] = itemArr
+            }
+        }
+        
+        if let delegate = self.delegate, delegate.shouldConfirm != nil {
+            
+            let flag = delegate.shouldConfirm!(withResult: result)
+            
+            if flag {
+                self.hide()
+                if let handler = self.completionHandler {
+                    handler(result)
+                }
+            }else {
+                print("shouldConfirmWithResult error")
+            }
+        }else {
+            self.hide()
+            if let handler = self.completionHandler {
+                handler(result)
+            }
+        }
+    }
 }
 
 extension JFFliter : UITableViewDelegate, UITableViewDataSource{
@@ -339,7 +392,7 @@ extension JFFliter : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let item = self.fliterItems[section]
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: self.kFliterSectionCellHeaderID) as! JFFliterSectionHeader
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: kFliterSectionCellHeaderID) as! JFFliterSectionHeader
         header.headerLabel.text = item.title
         return header
     }
@@ -348,9 +401,9 @@ extension JFFliter : UITableViewDelegate, UITableViewDataSource{
         let item = self.fliterItems[indexPath.section]
         var cell : JFFliterSectionCell
         if item.type == .ChooseButton {
-            cell = tableView.dequeueReusableCell(withIdentifier: self.kFliterSectionChooseCellID) as! JFFliterSectionCell
+            cell = tableView.dequeueReusableCell(withIdentifier: kFliterSectionChooseCellID) as! JFFliterSectionCell
         }else {
-            cell = tableView.dequeueReusableCell(withIdentifier: self.kFliterSectionPickerCellID) as! JFFliterSectionCell
+            cell = tableView.dequeueReusableCell(withIdentifier: kFliterSectionPickerCellID) as! JFFliterSectionCell
         }
         cell.selectionStyle = .none
         cell.cellItem = item
@@ -366,11 +419,11 @@ extension JFFliter : UITableViewDelegate, UITableViewDataSource{
 
 extension UIColor {
     
-    public static func colorWithHexString(hex:String) -> UIColor! {
-        return UIColor.colorWithHexString(hex: hex, alpha: 1.0)
+    public static func JFFliter_colorWithHexString(hex:String) -> UIColor! {
+        return UIColor.JFFliter_colorWithHexString(hex: hex, alpha: 1.0)
     }
     
-    public static func colorWithHexString(hex:String,alpha:Float) -> UIColor! {
+    public static func JFFliter_colorWithHexString(hex:String,alpha:Float) -> UIColor! {
         var cString = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         if cString.characters.count < 6 {
             return UIColor.clear
@@ -405,7 +458,7 @@ extension UIColor {
 }
 
 extension UIView {
-    var x: CGFloat {
+    var JFFliter_x: CGFloat {
         set {
             self.frame.origin.x = newValue
         }
@@ -414,7 +467,7 @@ extension UIView {
         }
     }
     
-    var y: CGFloat {
+    var JFFliter_y: CGFloat {
         set {
             self.frame.origin.y = newValue
         }
@@ -423,7 +476,7 @@ extension UIView {
         }
     }
     
-    var width: CGFloat {
+    var JFFliter_width: CGFloat {
         set {
             self.frame.size.width = newValue
         }
@@ -432,7 +485,7 @@ extension UIView {
         }
     }
     
-    var height: CGFloat {
+    var JFFliter_height: CGFloat {
         set {
             self.frame.size.height = newValue
         }
@@ -441,7 +494,7 @@ extension UIView {
         }
     }
     
-    var centerX: CGFloat {
+    var JFFliter_centerX: CGFloat {
         set {
             self.frame.size.height = newValue
         }

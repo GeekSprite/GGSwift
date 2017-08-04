@@ -46,7 +46,7 @@ class JFFliterItemCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if self.width > 0.00001 {
+        if self.JFFliter_width > 0.00001 {
             self.didLayoutSubviews()
         }
     }
@@ -57,6 +57,6 @@ class JFFliterItemCell: UICollectionViewCell {
     
     func didLayoutSubviews() {
         self.chooseButton.frame = self.bounds
-        self.chooseImgView.frame = CGRect.init(x: self.width - 20.0, y: self.height - 13.0, width: 20.0, height: 13.0)
+        self.chooseImgView.frame = CGRect.init(x: self.JFFliter_width - 20.0, y: self.JFFliter_height - 13.0, width: 20.0, height: 13.0)
     }
 }

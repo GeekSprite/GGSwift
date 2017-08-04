@@ -1,0 +1,629 @@
+[{
+        "id": 1,
+        "name": "北京市",
+        "cities": [
+            {"id": "dongchengqu", "name": "东城区"},
+			{"id": "xichengqu", "name": "西城区"},
+			{"id": "chaoyangqu", "name": "朝阳区"},
+			{"id": "fengtaiqu", "name": "丰台区"},
+			{"id": "shijingshanqu", "name": "石景山区"},
+			{"id": "haidianqu", "name": "海淀区"},
+			{"id": "meitougouqu", "name": "门头沟区"},
+			{"id": "fangshanqu", "name": "房山区"},
+			{"id": "tongzhouqu", "name": "通州区"},
+			{"id": "shunyiqu", "name": "顺义区"},
+			{"id": "changpingqu", "name": "昌平区"},
+			{"id": "daxingqu", "name": "大兴区"},
+			{"id": "huairouqu", "name": "怀柔区"},
+			{"id": "pingguqu", "name": "平谷区"},
+			{"id": "miyunxian", "name": "密云县"},
+			{"id": "yanqingxian", "name": "延庆县"}
+        ]
+    },{
+        "id": 1874,
+        "name": "辽宁省",
+        "cities": [
+            {"id": "anshan", "name": "鞍山市"},
+            {"id": "benxi", "name": "本溪市"},
+            {"id": "chaoyang1", "name": "朝阳市"},
+            {"id": "dalian", "name": "大连市"},
+            {"id": "dandong", "name": "丹东市"},
+            {"id": "fushun", "name": "抚顺市"},
+            {"id": "fuxin", "name": "阜新市"},
+            {"id": "huludao", "name": "葫芦岛市"},
+            {"id": "jinzhou1", "name": "锦州市"},
+            {"id": "liaoyang", "name": "辽阳市"},
+            {"id": "panjin", "name": "盘锦市"},
+            {"id": "shenyang", "name": "沈阳市"},
+            {"id": "tieling", "name": "铁岭市"},
+            {"id": "yingkou", "name": "营口市"}
+        ]
+    },{
+        "id": 1989,
+        "name": "内蒙古自治区",
+        "cities": [
+            {"id": "alashanmeng", "name": "阿拉善盟"},
+            {"id": "baotou", "name": "包头市"},
+            {"id": "bayanzhuoer", "name": "巴彦淖尔市"},
+            {"id": "chifeng", "name": "赤峰市"},
+            {"id": "eerduosi", "name": "鄂尔多斯市"},
+            {"id": "huhehaote", "name": "呼和浩特市"},
+            {"id": "hulunbeier", "name": "呼伦贝尔市"},
+            {"id": "tongliao", "name": "通辽市"},
+            {"id": "wuhai", "name": "乌海市"},
+            {"id": "wulanchabu", "name": "乌兰察布市"},
+            {"id": "xilingguole", "name": "锡林郭勒盟"},
+            {"id": "xinganmeng", "name": "兴安盟"}
+        ]
+    }, {
+        "id": 2103,
+        "name": "宁夏回族自治区",
+        "cities": [
+            {"id": "guyuan1", "name": "固原市"},
+            {"id": "shizuishan", "name": "石嘴山市"},
+            {"id": "wuzhong", "name": "吴忠市"},
+            {"id": "yinchuan", "name": "银川市"},
+            {"id": "zhongwei", "name": "中卫市"}
+        ]
+    },{
+        "id": 2130,
+        "name": "青海省",
+        "cities": [
+            {"id": "guoluo", "name": "果洛藏族自治州"},
+            {"id": "haidong", "name": "海东市"},
+            {"id": "huangnan", "name": "黄南藏族自治州"},
+            {"id": "hainan", "name": "海南藏族自治州"},
+            {"id": "haixi", "name": "海西蒙古族藏族自治州"},
+            {"id": "haibei", "name": "海北藏族自治州"},
+            {"id": "xining", "name": "西宁市"},
+            {"id": "yushu1", "name": "玉树藏族自治州"}
+        ]
+    },{
+        "id": 2182,
+        "name": "山东省",
+        "cities": [
+            {"id": "binzhou", "name": "滨州市"},
+            {"id": "dezhou", "name": "德州市"},
+            {"id": "dongying", "name": "东营市"},
+            {"id": "heze", "name": "菏泽市"},
+            {"id": "jinan", "name": "济南市"},
+            {"id": "jining1", "name": "济宁市"},
+            {"id": "linyi2", "name": "临沂市"},
+            {"id": "laiwu", "name": "莱芜市"},
+            {"id": "liaocheng", "name": "聊城市"},
+            {"id": "qingdao", "name": "青岛市"},
+            {"id": "rizhao", "name": "日照市"},
+            {"id": "taian1", "name": "泰安市"},
+            {"id": "weifang", "name": "潍坊市"},
+            {"id": "weihai", "name": "威海市"},
+            {"id": "yantai", "name": "烟台市"},
+            {"id": "zibo", "name": "淄博市"},
+            {"id": "zaozhuang", "name": "枣庄市"}
+        ]
+    },{
+        "id": 2340,
+        "name": "山西省",
+        "cities": [
+            {"id": "changzhi", "name": "长治市"},
+            {"id": "datong", "name": "大同市"},
+            {"id": "jinzhong", "name": "晋中市"},
+            {"id": "jincheng", "name": "晋城市"},
+            {"id": "linfen", "name": "临汾市"},
+            {"id": "lvliang", "name": "吕梁市"},
+            {"id": "shuozhou", "name": "朔州市"},
+            {"id": "taiyuan", "name": "太原市"},
+            {"id": "xinzhou", "name": "忻州市"},
+            {"id": "yangquan", "name": "阳泉市"},
+            {"id": "yuncheng", "name": "运城市"}
+        ]
+    },{
+        "id": 2471,
+        "name": "陕西省",
+        "cities": [
+            {"id": "ankang", "name": "安康市"},
+            {"id": "baoji", "name": "宝鸡市"},
+            {"id": "hanzhong", "name": "汉中市"},
+            {"id": "shangluo", "name": "商洛市"},
+            {"id": "tongchuan", "name": "铜川市"},
+            {"id": "weinan", "name": "渭南市"},
+            {"id": "xian", "name": "西安市"},
+            {"id": "xianyang", "name": "咸阳市"},
+            {"id": "yanan", "name": "延安市"},
+            {"id": "yulin", "name": "榆林市"},
+            {"id": "yangling", "name": "杨凌市"}
+        ]
+    },{
+        "id": 2589,
+        "name": "四川省",
+        "cities": [
+            {"id": "aba", "name": "阿坝藏族羌族自治州"},
+            {"id": "bazhong", "name": "巴中市"},
+            {"id": "chengdu", "name": "成都市"},
+            {"id": "dazhou", "name": "达州市"},
+            {"id": "deyang", "name": "德阳市"},
+            {"id": "guangan", "name": "广安市"},
+            {"id": "ganzi", "name": "甘孜藏族自治州"},
+            {"id": "guangyuan", "name": "广元市"},
+            {"id": "luzhou", "name": "泸州市"},
+            {"id": "leshan", "name": "乐山市"},
+            {"id": "liangshan1", "name": "凉山彝族自治州"},
+            {"id": "mianyang", "name": "绵阳市"},
+            {"id": "meishan", "name": "眉山市"},
+            {"id": "nanchong", "name": "南充市"},
+            {"id": "neijiang", "name": "内江市"},
+            {"id": "panzhihua", "name": "攀枝花市"},
+            {"id": "suining1", "name": "遂宁市"},
+            {"id": "yibin", "name": "宜宾市"},
+            {"id": "yaan", "name": "雅安市"},
+            {"id": "zigong", "name": "自贡市"},
+            {"id": "ziyang1", "name": "资阳市"}
+        ]
+    },{
+        "id": 2792,
+        "name": "西藏自治区",
+        "cities": [
+            {"id": "ali", "name": "阿里地区"},
+            {"id": "changdu", "name": "昌都地区"},
+            {"id": "lasa", "name": "拉萨市"},
+            {"id": "linzhi", "name": "林芝地区"},
+            {"id": "naqu", "name": "那曲地区"},
+            {"id": "rikaze", "name": "日喀则市"},
+            {"id": "shannan", "name": "山南地区"}
+        ]
+    },{
+        "id": 2873,
+        "name": "新疆维吾尔自治区",
+        "cities": [
+            {"id": "alaer", "name": "阿拉尔市"},
+            {"id": "akesu", "name": "阿克苏地区"},
+            {"id": "aletai", "name": "阿勒泰地区"},
+            {"id": "bazhou1", "name": "巴音郭楞蒙古自治州"},
+            {"id": "bozhou", "name": "博尔塔拉蒙古自治州"},
+            {"id": "changji", "name": "昌吉回族自治州"},
+            {"id": "hami", "name": "哈密地区"},
+            {"id": "hetian", "name": "和田地区"},
+            {"id": "kelamayi", "name": "克拉玛依市"},
+            {"id": "kashi", "name": "喀什地区"},
+            {"id": "kezhou", "name": "克孜勒苏柯尔克孜自治州"},
+            {"id": "shihezi", "name": "石河子市"},
+            {"id": "tulufan", "name": "吐鲁番地区"},
+            {"id": "tacheng", "name": "塔城地区"},
+            {"id": "wulumuqi", "name": "乌鲁木齐市"},
+            {"id": "yili", "name": "伊犁哈萨克自治州"}
+        ]
+    },{
+        "id": 2987,
+        "name": "云南省",
+        "cities": [
+            {"id": "baoshan1", "name": "保山市"},
+            {"id": "chuxiong", "name": "楚雄彝族自治州"},
+            {"id": "dali1", "name": "大理白族自治州"},
+            {"id": "diqing", "name": "迪庆藏族自治州"},
+            {"id": "dehong", "name": "德宏傣族景颇族自治州"},
+            {"id": "honghe", "name": "红河哈尼族彝族自治州"},
+            {"id": "kunming", "name": "昆明市"},
+            {"id": "lincang", "name": "临沧市"},
+            {"id": "lijiang", "name": "丽江市"},
+            {"id": "nujiang", "name": "怒江傈僳族自治州"},
+            {"id": "puer", "name": "普洱市"},
+            {"id": "qujing", "name": "曲靖市"},
+            {"id": "wenshan", "name": "文山壮族苗族自治州"},
+            {"id": "xishuangbanna", "name": "西双版纳傣族自治州"},
+            {"id": "yuxi", "name": "玉溪市"},
+            {"id": "zhaotong", "name": "昭通市"}
+        ]
+    },{
+        "id": 3133,
+        "name": "浙江省",
+        "cities": [
+            {"id": "hangzhou", "name": "杭州市"},
+            {"id": "huzhou", "name": "湖州市"},
+            {"id": "jiaxing", "name": "嘉兴市"},
+            {"id": "jinhua", "name": "金华市"},
+            {"id": "lishui", "name": "丽水市"},
+            {"id": "ningbo", "name": "宁波市"},
+            {"id": "quzhou1", "name": "衢州市"},
+            {"id": "shaoxing", "name": "绍兴市"},
+            {"id": "taizhou", "name": "台州市"},
+            {"id": "wenzhou", "name": "温州市"},
+            {"id": "zhoushan", "name": "舟山市"}
+        ]
+    },{
+        "id": 3235,
+        "name": "香港特别行政区",
+        "cities": [
+            {"id": "hongkong", "name": "香港特别行政区"}
+        ]
+    },{
+        "id": 3239,
+        "name": "澳门特别行政区",
+        "cities": [
+            {"id": "aomen", "name": "澳门特别行政区"}
+        ]
+    },{
+        "id": 3242,
+        "name": "台湾省",
+        "cities": [
+            {"id": "gaoxiong", "name": "高雄市"},
+            {"id": "taibei", "name": "台北市"},
+            {"id": "taizhong", "name": "台中市"},
+            {"id": "taiwan", "name": "台湾市"},
+            {"id": "xinbei", "name": "新北市"}
+        ]
+    },{
+        "id": 1763,
+        "name": "江西省",
+        "cities": [
+            {"id": "fuzhou1", "name": "抚州市"},
+            {"id": "ganzhou", "name": "赣州市"},
+            {"id": "jiujiang", "name": "九江市"},
+            {"id": "jian1", "name": "吉安市"},
+            {"id": "jingdezhen", "name": "景德镇市"},
+            {"id": "nanchang", "name": "南昌市"},
+            {"id": "pingxiang1", "name": "萍乡市"},
+            {"id": "shangrao", "name": "上饶市"},
+            {"id": "xinyu", "name": "新余市"},
+            {"id": "yichun1", "name": "宜春市"},
+            {"id": "yingtan", "name": "鹰潭市"}
+        ]
+    },{
+        "id": 1643,
+        "name": "江苏省",
+        "cities": [
+            {"id": "changzhou", "name": "常州市"},
+            {"id": "huaian1", "name": "淮安市"},
+            {"id": "lianyungang", "name": "连云港市"},
+            {"id": "nanjing", "name": "南京市"},
+            {"id": "nantong", "name": "南通市"},
+            {"id": "suzhou", "name": "苏州市"},
+            {"id": "suqian", "name": "宿迁市"},
+            {"id": "taizhou2", "name": "泰州市"},
+            {"id": "wuxi1", "name": "无锡市"},
+            {"id": "xuzhou", "name": "徐州市"},
+            {"id": "yangzhou", "name": "扬州市"},
+            {"id": "yancheng", "name": "盐城市"},
+            {"id": "zhenjiang", "name": "镇江市"}
+        ]
+    },{
+        "id": 21,
+        "name": "上海市",
+        "cities": [
+            {"id": "huangpuqu", "name": "黄浦区"},
+			{"id": "xuhuiqu", "name": "徐汇区"},
+			{"id": "changningqu", "name": "长宁区"},
+			{"id": "jinganqu", "name": "静安区"},
+			{"id": "putouqu", "name": "普陀区"},
+			{"id": "zhabeiqu", "name": "闸北区"},
+			{"id": "hongkouqu", "name": "虹口区"},
+			{"id": "yangpuqu", "name": "杨浦区"},
+			{"id": "minhangqu", "name": "闵行区"},
+			{"id": "baoshanqu", "name": "宝山区"},
+			{"id": "jiadingqu", "name": "嘉定区"},
+			{"id": "pudongxinqu", "name": "浦东新区"},
+			{"id": "jinshanqu", "name": "金山区"},
+			{"id": "songjiangqu", "name": "松江区"},
+			{"id": "qingpuqu", "name": "青浦区"},
+			{"id": "fengxianqu", "name": "奉贤区"},
+			{"id": "chongmingqu", "name": "崇明县"}
+        ]
+    },
+    {
+        "id": 42,
+        "name": "天津市",
+        "cities": [
+            {"id": "hepingqu", "name": "和平区"},
+			{"id": "hedongqu", "name": "河东区"},
+			{"id": "hexiqu", "name": "河西区"},
+			{"id": "nankaiqu", "name": "南开区"},
+			{"id": "hebeiqu", "name": "河北区"},
+			{"id": "hongqiaoqu", "name": "红桥区"},
+			{"id": "dongliqu", "name": "东丽区"},
+			{"id": "xiqingqu", "name": "西青区"},
+			{"id": "jinnanqu", "name": "津南区"},
+			{"id": "beichenqu", "name": "北辰区"},
+			{"id": "wuqingqu", "name": "武清区"},
+			{"id": "baidiqu", "name": "宝坻区"},
+			{"id": "binhexinqu", "name": "滨海新区"},
+			{"id": "ninhexian", "name": "宁河县"},
+			{"id": "jinghaixian", "name": "静海县"},
+			{"id": "lixian", "name": "蓟县"}
+        ]
+    },{
+        "id": 62,
+        "name": "重庆市",
+        "cities": [
+            {"id": "wanzhouqu", "name": "万州区"},
+			{"id": "hulingqu", "name": "涪陵区"},
+			{"id": "yuzhongqu", "name": "渝中区"},
+			{"id": "dadukouqu", "name": "大渡口区"},
+			{"id": "jiangbeiqu", "name": "江北区"},
+			{"id": "shapingbaqu", "name": "沙坪坝区"},
+			{"id": "jiulongpoqu", "name": "九龙坡区"},
+			{"id": "beupuqu", "name": "北碚区"},
+			{"id": "yuanjiangqu", "name": "綦江区"},
+			{"id": "dazuqu", "name": "大足区"},
+			{"id": "yubeiqu", "name": "渝北区"},
+			{"id": "bananqu", "name": "巴南区"},
+			{"id": "qianjiangqu", "name": "黔江区"},
+			{"id": "changshouqu", "name": "长寿区"},
+			{"id": "jingjinqu", "name": "江津区"},
+			{"id": "hechuanqu", "name": "合川区"},
+			{"id": "yongchuanqu", "name": "永川区"},
+			{"id": "nanchuanqu", "name": "南川区"},
+			{"id": "bishanqu", "name": "璧山区"},
+			{"id": "tongliangqu", "name": "铜梁区"},
+			{"id": "tongnanqu", "name": "潼南县"},
+			{"id": "rongchangqu", "name": "荣昌县"},
+			{"id": "liangpingqu", "name": "梁平县"},
+			{"id": "chengkouxian", "name": "城口县"},
+			{"id": "dianjiangxian", "name": "垫江县"},
+			{"id": "fengduqu", "name": "丰都县"},
+			{"id": "wulongxian", "name": "武隆县"},
+			{"id": "zhongxian", "name": "忠县"},
+			{"id": "kaixian", "name": "开县"},
+			{"id": "yunyangxian", "name": "云阳县"},
+			{"id": "fengjiexian", "name": "奉节县"},
+			{"id": "wushanxian", "name": "巫山县"},
+			{"id": "wuxixian", "name": "巫溪县"},
+			{"id": "shizhushan", "name": "石柱土家族自治县"},
+			{"id": "xiushan", "name": "秀山土家族苗族自治县"},
+			{"id": "jiuyang", "name": "酉阳土家族苗族自治县"},
+			{"id": "pengshui", "name": "彭水苗族土家族自治县"}
+        ]
+    },{
+        "id": 104,
+        "name": "安徽省",
+        "cities": [
+            {"id": "anqing", "name": "安庆市"},
+            {"id": "bengbu", "name": "蚌埠市"},
+            {"id": "chuzhou1", "name": "滁州市"},
+            {"id": "chaohu", "name": "巢湖市"},
+            {"id": "chizhou", "name": "池州市"},
+            {"id": "fuyang1", "name": "阜阳市"},
+            {"id": "hefei", "name": "合肥市"},
+            {"id": "huainan", "name": "淮南市"},
+            {"id": "bozhou2", "name": "亳州市"},
+            {"id": "huangshan", "name": "黄山市"},
+            {"id": "huaibei", "name": "淮北市"},
+            {"id": "luan", "name": "六安市"},
+            {"id": "maanshan", "name": "马鞍山市"},
+            {"id": "suzhou1", "name": "宿州市"},
+            {"id": "tongling", "name": "铜陵市"},
+            {"id": "wuhu", "name": "芜湖市"},
+            {"id": "xuancheng", "name": "宣城市"}
+        ]
+    },{
+        "id": 227,
+        "name": "福建省",
+        "cities": [
+            {"id": "fuzhou", "name": "福州市"},
+            {"id": "longyan", "name": "龙岩市"},
+            {"id": "ningde", "name": "宁德市"},
+            {"id": "nanping", "name": "南平市"},
+            {"id": "putian", "name": "莆田市"},
+            {"id": "quanzhou", "name": "泉州市"},
+            {"id": "sanming", "name": "三明市"},
+            {"id": "xiamen", "name": "厦门市"},
+            {"id": "zhangzhou", "name": "漳州市"}
+        ]
+    },{
+        "id": 322,
+        "name": "甘肃省",
+        "cities": [
+            {"id": "lanzhou", "name": "兰州市"},
+            {"id": "baiyin", "name": "白银市"},
+            {"id": "dingxi", "name": "定西市"},
+            {"id": "gannan", "name": "甘南市"},
+            {"id": "jinchang", "name": "金昌市"},
+            {"id": "jiuquan", "name": "酒泉市"},
+            {"id": "jiayuguan", "name": "嘉峪关市"},
+            {"id": "longnan1", "name": "陇南市"},
+            {"id": "linxia", "name": "临夏市"},
+            {"id": "pingliang", "name": "平凉市"},
+            {"id": "qingyang", "name": "庆阳市"},
+            {"id": "tianshui", "name": "天水市"},
+            {"id": "wuwei", "name": "武威市"},
+            {"id": "zhangye", "name": "张掖市"}
+        ]
+    },{
+        "id": 423,
+        "name": "广东省",
+        "cities": [
+            {"id": "chaozhou", "name": "潮州市"},
+            {"id": "dongguan", "name": "东莞市"},
+            {"id": "foshan", "name": "佛山市"},
+            {"id": "guangzhou", "name": "广州市"},
+            {"id": "huizhou", "name": "惠州市"},
+            {"id": "heyuan", "name": "河源市"},
+            {"id": "jiangmen", "name": "江门市"},
+            {"id": "jieyang", "name": "揭阳市"},
+            {"id": "meizhou", "name": "梅州市"},
+            {"id": "maoming", "name": "茂名市"},
+            {"id": "qingyuan3", "name": "清远市"},
+            {"id": "shaoguan", "name": "韶关市"},
+            {"id": "shantou", "name": "汕头市"},
+            {"id": "shenzhen", "name": "深圳市"},
+            {"id": "shanwei", "name": "汕尾市"},
+            {"id": "yunfu", "name": "云浮市"},
+            {"id": "yangjiang", "name": "阳江市"},
+            {"id": "zhuhai", "name": "珠海市"},
+            {"id": "zhaoqing", "name": "肇庆市"},
+            {"id": "zhanjiang", "name": "湛江市"},
+            {"id": "zhongshan", "name": "中山市"}
+        ]
+    },{
+        "id": 566,
+        "name": "广西壮族自治区",
+        "cities": [
+            {"id": "baise", "name": "百色市"},
+            {"id": "beihai", "name": "北海市"},
+            {"id": "chongzuo", "name": "崇左市"},
+            {"id": "fangchenggang", "name": "防城港市"},
+            {"id": "guilin", "name": "桂林市"},
+            {"id": "guigang", "name": "贵港市"},
+            {"id": "hezhou", "name": "贺州市"},
+            {"id": "hechi", "name": "河池市"},
+            {"id": "liuzhou", "name": "柳州市"},
+            {"id": "laibin", "name": "来宾市"},
+            {"id": "nanning", "name": "南宁市"},
+            {"id": "qinzhou", "name": "钦州市"},
+            {"id": "wuzhou", "name": "梧州市"},
+            {"id": "yulin1", "name": "玉林市"}
+        ]
+    },{
+        "id": 690,
+        "name": "贵州省",
+        "cities": [
+            {"id": "anshun", "name": "安顺市"},
+            {"id": "bijie", "name": "毕节市"},
+            {"id": "qiannan", "name": "黔南布依族苗族自治州"},
+            {"id": "guiyang1", "name": "贵阳市"},
+            {"id": "liupanshui", "name": "六盘水市"},
+            {"id": "qiandongnan", "name": "黔东南苗族侗族自治州"},
+            {"id": "qianxinan", "name": "黔西南布依族苗族自治"},
+            {"id": "tongren", "name": "铜仁市"},
+            {"id": "zunyi", "name": "遵义市"}
+        ]
+    },
+    {
+        "id": 788,
+        "name": "海南省",
+        "cities": [
+            {"id": "baisha", "name": "白沙黎族自治县"},
+            {"id": "baoting", "name": "保亭黎族苗族自治县"},
+            {"id": "chengmai", "name": "澄迈市"},
+            {"id": "changjiang", "name": "昌江黎族自治县"},
+            {"id": "dongfang", "name": "东方市"},
+            {"id": "danzhou", "name": "儋州市"},
+            {"id": "dingan", "name": "定安市"},
+            {"id": "haikou", "name": "海口市"},
+            {"id": "lingao", "name": "临高市"},
+            {"id": "lingshui", "name": "陵水黎族自治县"},
+            {"id": "ledong", "name": "乐东黎族自治县"},
+            {"id": "nanshadao", "name": "南沙岛市"},
+            {"id": "qiongzhong", "name": "琼中黎族苗族自治县"},
+            {"id": "qionghai", "name": "琼海市"},
+            {"id": "sanya", "name": "三亚市"},
+            {"id": "tunchang", "name": "屯昌市"},
+            {"id": "wenchang", "name": "文昌市"},
+            {"id": "wanning", "name": "万宁市"},
+            {"id": "wuzhishan", "name": "五指山市"},
+            {"id": "xisha", "name": "西沙市"}
+        ]
+    },{
+        "id": 814,
+        "name": "河北省",
+        "cities": [
+            {"id": "baoding", "name": "保定市"},
+            {"id": "chengde", "name": "承德市"},
+            {"id": "cangzhou", "name": "沧州市"},
+            {"id": "hengshui", "name": "衡水市"},
+            {"id": "handan", "name": "邯郸市"},
+            {"id": "langfang", "name": "廊坊市"},
+            {"id": "qinhuangdao", "name": "秦皇岛市"},
+            {"id": "shijiazhuang", "name": "石家庄市"},
+            {"id": "tangshan", "name": "唐山市"},
+            {"id": "xingtai", "name": "邢台市"},
+            {"id": "zhangjiakou", "name": "张家口市"}
+        ]
+    },
+    {
+        "id": 998,
+        "name": "河南省",
+        "cities": [
+            {"id": "anyang", "name": "安阳市"},
+            {"id": "hebi", "name": "鹤壁市"},
+            {"id": "jiaozuo", "name": "焦作市"},
+            {"id": "jiyuan", "name": "济源市"},
+            {"id": "kaifeng", "name": "开封市"},
+            {"id": "luoyang", "name": "洛阳市"},
+            {"id": "luohe", "name": "漯河市"},
+            {"id": "nanyang", "name": "南阳市"},
+            {"id": "pingdingshan", "name": "平顶山市"},
+            {"id": "puyang", "name": "濮阳市"},
+            {"id": "shangqiu", "name": "商丘市"},
+            {"id": "sanmenxia", "name": "三门峡市"},
+            {"id": "xinxiang", "name": "新乡市"},
+            {"id": "xuchang", "name": "许昌市"},
+            {"id": "xinyang", "name": "信阳市"},
+            {"id": "zhengzhou", "name": "郑州市"},
+            {"id": "zhoukou", "name": "周口市"},
+            {"id": "zhumadian", "name": "驻马店市"},
+			{"id": "jiyuanshi", "name": "济源市"}
+        ]
+    },{
+        "id": 1176,
+        "name": "黑龙江省",
+        "cities": [
+            {"id": "daxinganling", "name": "大兴安岭地区"},
+            {"id": "daqing", "name": "大庆市"},
+            {"id": "haerbin", "name": "哈尔滨市"},
+            {"id": "heihe", "name": "黑河市"},
+            {"id": "hegang", "name": "鹤岗市"},
+            {"id": "jiamusi", "name": "佳木斯市"},
+            {"id": "jixi", "name": "鸡西市"},
+            {"id": "mudanjiang", "name": "牡丹江市"},
+            {"id": "qiqihaer", "name": "齐齐哈尔市"},
+            {"id": "qitaihe", "name": "七台河市"},
+            {"id": "suihua", "name": "绥化市"},
+            {"id": "shuangyashan", "name": "双鸭山市"},
+            {"id": "yichun", "name": "伊春市"}
+        ]
+    },{
+        "id": 1320,
+        "name": "湖北省",
+        "cities": [
+            {"id": "ezhou", "name": "鄂州市"},
+            {"id": "enshi", "name": "恩施土家族苗族自治州"},
+            {"id": "huanggang", "name": "黄冈市"},
+            {"id": "huangshi", "name": "黄石市"},
+            {"id": "jingzhou", "name": "荆州市"},
+            {"id": "jingmen", "name": "荆门市"},
+            {"id": "shiyan", "name": "十堰市"},
+            {"id": "suizhou", "name": "随州市"},
+            {"id": "wuhan", "name": "武汉市"},
+            {"id": "xiangyang", "name": "襄阳市"},
+            {"id": "xiaogan", "name": "孝感市"},
+            {"id": "xianning", "name": "咸宁市"},
+            {"id": "yichang", "name": "宜昌市"},
+			{"id": "xiantaoshi", "name": "仙桃市"},
+            {"id": "qianjiangshi", "name": "潜江市"},
+			{"id": "tianmenshi", "name": "天门市"},
+            {"id": "shennongjia", "name": "神农架林区"}
+        ]
+    },{
+        "id": 1436,
+        "name": "湖南省",
+        "cities": [
+            {"id": "changsha", "name": "长沙市"},
+            {"id": "chenzhou", "name": "郴州市"},
+            {"id": "changde", "name": "常德市"},
+            {"id": "hengyang", "name": "衡阳市"},
+            {"id": "huaihua", "name": "怀化市"},
+            {"id": "loudi", "name": "娄底市"},
+            {"id": "shaoyang", "name": "邵阳市"},
+            {"id": "xiangtan", "name": "湘潭市"},
+            {"id": "xiangxi", "name": "湘西土家族苗族自治州"},
+            {"id": "yiyang1", "name": "益阳市"},
+            {"id": "yueyang", "name": "岳阳市"},
+            {"id": "yongzhou", "name": "永州市"},
+            {"id": "zhuzhou", "name": "株洲市"},
+            {"id": "zhangjiajie", "name": "张家界市"}
+        ]
+    }, {
+        "id": 1573,
+        "name": "吉林省",
+        "cities": [
+            {"id": "baicheng", "name": "白城市"},
+            {"id": "baishan", "name": "白山市"},
+            {"id": "changchun", "name": "长春市"},
+            {"id": "jilin", "name": "吉林市"},
+            {"id": "liaoyuan", "name": "辽源市"},
+            {"id": "siping", "name": "四平市"},
+            {"id": "songyuan", "name": "松原市"},
+            {"id": "tonghua", "name": "通化市"},
+            {"id": "yanbian", "name": "延边朝鲜族自治州"}
+        ]
+    }]
+
+

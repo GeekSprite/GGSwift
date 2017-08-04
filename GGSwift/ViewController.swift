@@ -25,24 +25,40 @@ class ViewController: UIViewController {
     
     func buttonClick(sender : UIButton) {
         var items: [JFFliterItem] = []
-        for _ in 0..<10 {
+        for index in 0..<10 {
             let item = JFFliterItem()
             item.title = "交易类型"
-            item.key = "tradeType"
-            item.type = .Picker
-            item.sectionSelect = arc4random() % 2 == 0
-//            item.subTitles = ["贴现","买入","转让"]
-//            item.enableMultipleChoose = false
+            item.key = "tradeType\(index)"
+            if index % 2 == 0 {
+                item.type = .Picker
+                if arc4random() % 3 == 0 {
+                    item.pickerType = .AddressPicker
+                }else if arc4random() % 3 == 1 {
+                    item.pickerType = .DatePicker
+                }else {
+                    item.pickerType = .TextField
+                }
+            }else {
+                item.type = .ChooseButton
+                item.subTitles = ["C","C++","JAVA","Objective-C","Swift","JavaScript"]
+            }
             items.append(item)
         }
         let fliter = JFFliter.init(fliterItems: items) { (dic) in
             
         }
-        
+        fliter.delegate = self
         fliter.showWithCompletion { 
             print("======")
         }
     }
 
+}
+
+extension ViewController : JFFliterViewDelegate {
+    func shouldConfirm(withResult result: [String : [String]]) -> Bool {
+        print(result);
+        return true
+    }
 }
 

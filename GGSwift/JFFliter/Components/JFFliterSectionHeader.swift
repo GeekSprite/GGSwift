@@ -21,7 +21,7 @@ class JFFliterSectionHeader: UITableViewHeaderFooterView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        guard self.width > 0.00001 else {
+        guard self.JFFliter_width > 0.00001 else {
             return
         }
         self.didLayoutSubviews()
@@ -44,7 +44,7 @@ class JFFliterSectionHeader: UITableViewHeaderFooterView {
         let label = UILabel()
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: FontUtil.fontSize(size: 11))
-        label.textColor = UIColor.colorWithHexString(hex: "#828282")
+        label.textColor = UIColor.JFFliter_colorWithHexString(hex: "#828282")
         return label
     }()
     

@@ -10,6 +10,7 @@ import UIKit
 
 class JFFliterSectionCell: UITableViewCell {
     
+    // MARK: Life Circle
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.didInit()
@@ -21,18 +22,19 @@ class JFFliterSectionCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        guard self.width > 0.00001 else {
+        guard self.JFFliter_width > 0.00001 else {
             return
         }
         self.didLayoutSubviews()
     }
 
+    // MARK: Public Methods
     open func didInit() {
         self.backgroundColor = UIColor.clear
         guard JFFliterAppearceManager.shared.separateLineStyle != .None else {
             return
         }
-        self.sepLine.backgroundColor = JFFliterAppearceManager.shared.separateLineStyle == .Black ? UIColor.colorWithHexString(hex: "#030404") : UIColor.colorWithHexString(hex: "#fcfbfb")
+        self.sepLine.backgroundColor = JFFliterAppearceManager.shared.separateLineStyle == .Black ? UIColor.JFFliter_colorWithHexString(hex: "#030404") : UIColor.JFFliter_colorWithHexString(hex: "#fcfbfb")
         self.addSubview(self.sepLine)
     }
     
@@ -41,15 +43,17 @@ class JFFliterSectionCell: UITableViewCell {
             return
         }
         let sepHeight : CGFloat = 1.0
-        self.sepLine.frame = CGRect.init(x: 0, y: self.height - sepHeight, width: self.width, height: sepHeight)
+        self.sepLine.frame = CGRect.init(x: 0, y: self.JFFliter_height - sepHeight, width: self.JFFliter_width, height: sepHeight)
     }
     
+    // MARK: Public Property
     var cellItem : JFFliterItem? {
         didSet {
     
         }
     }
     
+    // MARK: Private Property
     private lazy var sepLine: UIView = {
         let line = UIView()
         return line

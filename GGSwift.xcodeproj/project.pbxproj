@@ -20,6 +20,10 @@
 		6E55DA4B1F31CE10009BB8C9 /* gouxuan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55DA481F31CE10009BB8C9 /* gouxuan@2x.png */; };
 		6E55DA4C1F31CE10009BB8C9 /* gouxuan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55DA491F31CE10009BB8C9 /* gouxuan@3x.png */; };
 		6EB734871F2F1F6C00E85511 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB734861F2F1F6C00E85511 /* Person.swift */; };
+		6EB9A3B91F34291700046614 /* JFSelectDatePickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9A3B81F34291700046614 /* JFSelectDatePickView.swift */; };
+		6EB9A3BB1F34292800046614 /* JFSelectDatePickView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9A3BA1F34292800046614 /* JFSelectDatePickView.xib */; };
+		6EB9A3BD1F34593600046614 /* china_provinces_cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9A3BC1F34593600046614 /* china_provinces_cities.json */; };
+		6EB9A3BF1F34595700046614 /* JFSelectAddressPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9A3BE1F34595700046614 /* JFSelectAddressPickerView.swift */; };
 		6EEEA8E61F2AD149009F480A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEEA8E51F2AD149009F480A /* AppDelegate.swift */; };
 		6EEEA8E81F2AD149009F480A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEEA8E71F2AD149009F480A /* ViewController.swift */; };
 		6EEEA8EB1F2AD149009F480A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EEEA8E91F2AD149009F480A /* Main.storyboard */; };
@@ -57,6 +61,10 @@
 		6E55DA481F31CE10009BB8C9 /* gouxuan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gouxuan@2x.png"; sourceTree = "<group>"; };
 		6E55DA491F31CE10009BB8C9 /* gouxuan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gouxuan@3x.png"; sourceTree = "<group>"; };
 		6EB734861F2F1F6C00E85511 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		6EB9A3B81F34291700046614 /* JFSelectDatePickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFSelectDatePickView.swift; sourceTree = "<group>"; };
+		6EB9A3BA1F34292800046614 /* JFSelectDatePickView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFSelectDatePickView.xib; sourceTree = "<group>"; };
+		6EB9A3BC1F34593600046614 /* china_provinces_cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = china_provinces_cities.json; sourceTree = "<group>"; };
+		6EB9A3BE1F34595700046614 /* JFSelectAddressPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFSelectAddressPickerView.swift; sourceTree = "<group>"; };
 		6EEEA8E21F2AD149009F480A /* GGSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EEEA8E51F2AD149009F480A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EEEA8E71F2AD149009F480A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +145,8 @@
 				6E55DA3E1F306C9E009BB8C9 /* JFFliterSectionChooseCell.swift */,
 				6E55DA401F306CC2009BB8C9 /* JFFliterSectionHeader.swift */,
 				6E55DA421F306CE6009BB8C9 /* JFFliterItemCell.swift */,
+				6EB9A3B81F34291700046614 /* JFSelectDatePickView.swift */,
+				6EB9A3BA1F34292800046614 /* JFSelectDatePickView.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -152,6 +162,7 @@
 		6E55DA461F31CE10009BB8C9 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				6EB9A3BC1F34593600046614 /* china_provinces_cities.json */,
 				6E55DA471F31CE10009BB8C9 /* gouxuan.png */,
 				6E55DA481F31CE10009BB8C9 /* gouxuan@2x.png */,
 				6E55DA491F31CE10009BB8C9 /* gouxuan@3x.png */,
@@ -162,6 +173,7 @@
 		6EEEA8D91F2AD149009F480A = {
 			isa = PBXGroup;
 			children = (
+				6EB9A3BE1F34595700046614 /* JFSelectAddressPickerView.swift */,
 				3B2083DF1F31F07B001F2365 /* JFFliter */,
 				6EB734861F2F1F6C00E85511 /* Person.swift */,
 				6EEEA8E41F2AD149009F480A /* GGSwift */,
@@ -250,11 +262,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB9A3BB1F34292800046614 /* JFSelectDatePickView.xib in Resources */,
 				6E55DA4B1F31CE10009BB8C9 /* gouxuan@2x.png in Resources */,
 				6E55DA4C1F31CE10009BB8C9 /* gouxuan@3x.png in Resources */,
 				6EEEA8F01F2AD149009F480A /* LaunchScreen.storyboard in Resources */,
 				6E55DA4A1F31CE10009BB8C9 /* gouxuan.png in Resources */,
 				6EEEA8ED1F2AD149009F480A /* Assets.xcassets in Resources */,
+				6EB9A3BD1F34593600046614 /* china_provinces_cities.json in Resources */,
 				6EEEA8EB1F2AD149009F480A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,9 +283,11 @@
 				6E55DA311F306B29009BB8C9 /* JFFliterAppearceManager.swift in Sources */,
 				6EB734871F2F1F6C00E85511 /* Person.swift in Sources */,
 				6E55DA451F31698D009BB8C9 /* FontUtil.swift in Sources */,
+				6EB9A3B91F34291700046614 /* JFSelectDatePickView.swift in Sources */,
 				6EEEA8E81F2AD149009F480A /* ViewController.swift in Sources */,
 				6EEEA8E61F2AD149009F480A /* AppDelegate.swift in Sources */,
 				6E55DA2F1F306B0A009BB8C9 /* JFFliter.swift in Sources */,
+				6EB9A3BF1F34595700046614 /* JFSelectAddressPickerView.swift in Sources */,
 				6E55DA431F306CE6009BB8C9 /* JFFliterItemCell.swift in Sources */,
 				6E55DA3F1F306C9E009BB8C9 /* JFFliterSectionChooseCell.swift in Sources */,
 				6E55DA411F306CC2009BB8C9 /* JFFliterSectionHeader.swift in Sources */,

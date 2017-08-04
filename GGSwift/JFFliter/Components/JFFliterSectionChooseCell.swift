@@ -26,7 +26,7 @@ class JFFliterSectionChooseCell: JFFliterSectionCell {
         let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.minimumLineSpacing = JFFliterAppearceManager.shared.sectionPaddingSize.height
         layout.minimumInteritemSpacing = JFFliterAppearceManager.shared.sectionPaddingSize.width
-        self.collectionView.frame = CGRect.init(x: JFFliterAppearceManager.shared.sectionPaddingSize.width, y: 0, width: self.width - JFFliterAppearceManager.shared.sectionPaddingSize.width * 2.0, height: self.height - JFFliterAppearceManager.shared.sectionPaddingSize.height)
+        self.collectionView.frame = CGRect.init(x: JFFliterAppearceManager.shared.sectionPaddingSize.width, y: 0, width: self.JFFliter_width - JFFliterAppearceManager.shared.sectionPaddingSize.width * 2.0, height: self.JFFliter_height - JFFliterAppearceManager.shared.sectionPaddingSize.height)
     }
     
     fileprivate let kFliterItemCellID = "kFliterItemCellID"
@@ -61,7 +61,7 @@ extension JFFliterSectionChooseCell : UICollectionViewDelegateFlowLayout, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = floor((self.width - CGFloat(JFFliterAppearceManager.shared.subButtonCount + 1) * JFFliterAppearceManager.shared.sectionPaddingSize.width) / CGFloat(JFFliterAppearceManager.shared.subButtonCount))
+        let width = floor((self.JFFliter_width - CGFloat(JFFliterAppearceManager.shared.subButtonCount + 1) * JFFliterAppearceManager.shared.sectionPaddingSize.width) / CGFloat(JFFliterAppearceManager.shared.subButtonCount))
         let height = JFFliterAppearceManager.shared.subButtonHeight
         return CGSize.init(width: width, height: height)
     }

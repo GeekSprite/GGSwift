@@ -84,11 +84,12 @@ class JFFliterItem: NSObject {
                 self.leftMaxNumber = NSNumber.init(value: 366)
                 self.rightMaxNumber = NSNumber.init(value: 366)
             case .DatePicker:
-            self.leftMinDate = self.dateByAddMonths(date: Date(), months: -12)
+                self.leftMinDate = self.dateByAddMonths(date: Date(), months: -12)
                 self.leftMaxDate = Date()
                 self.rightMinDate = Date()
                 self.rightMaxDate = self.dateByAddMonths(date: Date(), months: 12)
             case .AddressPicker:
+                self.sectionSelect = false
                 break
             }
         }
@@ -152,9 +153,7 @@ class JFFliterItem: NSObject {
     
     private func dateByAddMonths(date: Date,months: Int) -> Date {
         let calendar = Calendar.current
-        var components = DateComponents()
-        components.month = months
-        return calendar.date(byAdding: components, to: date, wrappingComponents: true)!
+        return calendar.date(byAdding: .month, value: months, to: date)!
     }
     
 }
