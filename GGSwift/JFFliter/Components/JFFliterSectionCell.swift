@@ -10,6 +10,10 @@ import UIKit
 
 class JFFliterSectionCell: UITableViewCell {
     
+    deinit {
+        print(#function)
+    }
+    
     // MARK: Life Circle
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

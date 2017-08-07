@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         self.view.addSubview(self.button!)
     }
     
-    func buttonClick(sender : UIButton) {
+    lazy var fliter: JFFliter = {
         var items: [JFFliterItem] = []
         for index in 0..<10 {
             let item = JFFliterItem()
@@ -48,7 +48,11 @@ class ViewController: UIViewController {
             
         }
         fliter.delegate = self
-        fliter.showWithCompletion { 
+        return fliter
+    }()
+    
+    func buttonClick(sender : UIButton) {
+        self.fliter.showWithCompletion {
             print("======")
         }
     }
@@ -56,7 +60,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController : JFFliterViewDelegate {
-    func shouldConfirm(withResult result: [String : [String]]) -> Bool {
+    func shouldConfirmWithResult(result: [String : [String]]) -> Bool {
         print(result);
         return true
     }

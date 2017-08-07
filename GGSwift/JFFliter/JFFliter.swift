@@ -21,8 +21,10 @@ enum JFFliterSlideFrom {
     case Right
 }
 
-@objc protocol JFFliterViewDelegate : NSObjectProtocol {
-   @objc optional func shouldConfirm(withResult result:[String:[String]]) -> Bool
+@objc
+protocol JFFliterViewDelegate : NSObjectProtocol {
+    @objc(shouldConfirmWithResult:)
+    optional func shouldConfirmWithResult(result:[String:[String]]) -> Bool
 }
 
 protocol JFFliterViewDataSource : NSObjectProtocol {
@@ -105,6 +107,7 @@ class JFFliter: UIView {
     
     // MARK: Life Cricle
     deinit {
+         print(#function)
         let center = NotificationCenter.default
         center.removeObserver(self, name: .UIKeyboardDidShow, object: nil)
         center.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
@@ -207,6 +210,7 @@ class JFFliter: UIView {
         
         self.removeFromSuperview()
         self.comtainerWindow = nil
+        print(#function)
     }
     
    private func showAnimationWithCompletion(completion: ((Bool) -> Void)? ) {
@@ -347,24 +351,25 @@ class JFFliter: UIView {
             }
         }
         
-        if let delegate = self.delegate, delegate.shouldConfirm != nil {
-            
-            let flag = delegate.shouldConfirm!(withResult: result)
-            
-            if flag {
-                self.hide()
-                if let handler = self.completionHandler {
-                    handler(result)
-                }
-            }else {
-                print("shouldConfirmWithResult error")
-            }
-        }else {
+        guard let function = self.delegate?.shouldConfirmWithResult(result:) else {
             self.hide()
             if let handler = self.completionHandler {
                 handler(result)
             }
+            return
         }
+        
+        let flag = function(result)
+        
+        if flag {
+            self.hide()
+            if let handler = self.completionHandler {
+                handler(result)
+            }
+        }else {
+            print("shouldConfirmWithResult error")
+        }
+        
     }
 }
 

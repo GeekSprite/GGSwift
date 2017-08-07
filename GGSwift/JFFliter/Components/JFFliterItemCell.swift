@@ -10,6 +10,10 @@ import UIKit
 
 class JFFliterItemCell: UICollectionViewCell {
     
+    deinit {
+        print(#function)
+    }
+    
     open lazy var chooseButton: UIButton = {
         let button = UIButton.init(type: .custom)
         button.titleLabel?.font = JFFliterAppearceManager.shared.subButtonFont
